@@ -20,9 +20,9 @@
 
 🐈‍ **Git Hub:** Durante o curso de Git e GitHub consegui aprender como utilizar pelo terminal do Git dar commit, push, clonar repositórios, manipular o markdown para criação de README,etc.
 
-🐧 **Linux:** Com o curso de Linux consegui criar uma máquina virtual e instalar Linux nela, utilizar vários comandos no terminal sem uma interface gráfica para a criação e organização de diretórios, arquivos, gerenciamento de permissões de usuários, editores de texto, entre outros.
+🐧 **Linux:** Com o curso de Linux consegui criar uma máquina virtual e instalar Linux Ubuntu nela, utilizar vários comandos no terminal sem uma interface gráfica (via terminal) para a criação e organização de diretórios, arquivos, gerenciamento de permissões de usuários, editores de texto, entre outros.
 
-🎯 **Desafio** Para o desafio foi criado uma máquina virtual pelo software Oracle VirtualBox com o sistema operacional Linux Ubuntu. Utilizando o editor de texto vim no terminal do Linux foi feito um shell script que processa os dados de venda de um arquivo csv em 4 dias diferentes no mesmo horário com o auxílio do crontab e após gerado os 4 relatórios, eles foram juntados em um relatório final com um shell script.
+🎯 **Desafio** Para o desafio foi criado uma máquina virtual pelo software Oracle VirtualBox com o sistema operacional Linux Ubuntu. Utilizando o editor de texto vim no terminal do Linux. Foi feito um shell script que processa os dados de venda de um arquivo csv em 4 dias diferentes no mesmo horário com o auxílio do crontab e após gerado os 4 relatórios, eles foram juntados em um relatório final com um shell script.
 
 [**Voltar ao Sumário**](#sumário)
 

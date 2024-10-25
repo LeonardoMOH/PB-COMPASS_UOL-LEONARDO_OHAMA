@@ -16,12 +16,21 @@
 ## Sprints 🏃
 
 1. [Sprint 1 - Markdown, Git e Linux](Sprint%201/README.md)
+
 2. [Sprint 2 - Linguagem SQL, conceitos básicos da área de Dados e Introdução AWS](Sprint%202/README.md)
+
 3. [Sprint 3 - Python e Introdução AWS](Sprint%203/README.md)
+
 4. [Sprint 4 - Paradigma Funcional (Python), Containers e Introdução AWS](Sprint%204/README.md)
+
 5. [Sprint 5 - Fundamentos de Computação em Nuvem (AWS)](Sprint%205/README.md)
+
 6. [Sprint 6 - Serviços Analíticos (AWS)](Sprint%206/README.md)
+
 7. [Sprint 7 - Plataformas Big Data (Spark, Hadoop)](Sprint%207/README.md)
+
 8. [Sprint 8 - Apache Spark](Sprint%208/README.md)
+
 9. [Sprint 9 - Apache Spark](Sprint%209/README.md)
+
 10. [Sprint 10 - Visualização de Dados](Sprint%210/README.md)
