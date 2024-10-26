@@ -12,7 +12,7 @@
 
     IV.   [Etapa 4 - Criação do relatorio$DATA_ARQUIVO](#Etapa4)
 
-    V.    [Etapa 5 - Primeiro e último item comprados relatorio$DATA_ARQUIVO](#Etapa5)
+    V.    [Etapa 5 - Primeiro e último itens comprados relatorio$DATA_ARQUIVO](#Etapa5)
 
     VI.   [Etapa 6 - Total de itens e os 10 primeiros itens relatorio$DATA_ARQUIVO](#Etapa6)
 
@@ -90,7 +90,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 4. ... [Etapa 4 - Criação do relatorio$DATA_ARQUIVO](#Etapa4)
 
-    Agora é criado o relatório$DATA_ARQUIVO.txt que irá receber os outputs do arquivo processado dados_de_vendas. Primeiramente é feito o comando echo que irá registrar o dia e horário que fora registrado anteriormente e logo após isso é utilizado o comando awk para criar uma coluna auxiliar em um segundo arquivo para processar a ordenação do sort para isso no comando awk é imprimir todas as colunas já existentes e na sexta coluna é criado a coluna auxiliar que consiste na data no formato YYYYMMDD, pois utilizando o comando sort em uma data DD/MM/YYYY é ordenado somente pelo dia, ou seja, se uma data 01/03/2024 é comparado com uma data 25/01/2024 com o comando sort a primeira data estará na frente da segunda data. Portanto, no comando sort é utilizado a ordenação numérica na sexta coluna (lembrando que foi utilizado as tags para respeitarem os separadores do arquivo csv). Obs.: Durante o dia 23/10/2024 tive um problema ao rodar script que fornecia um relatório com output errado, porém o problema foi resolvido por um conflito com arquivo CSV e não com o código do programa. Vide [Anexo 10](#Anexo10).
+    Agora é criado o relatório$DATA_ARQUIVO.txt que irá receber os outputs do arquivo processado dados_de_vendas. Primeiramente é feito o comando echo que irá registrar o dia e horário que fora registrado anteriormente e logo após isso é utilizado o comando awk para criar uma coluna auxiliar em um segundo arquivo para processar a ordenação do sort para isso no comando awk é imprimir todas as colunas já existentes e na sexta coluna é criado a coluna auxiliar que consiste na data no formato YYYYMMDD, pois utilizando o comando sort em uma data DD/MM/YYYY é ordenado somente pelo dia, ou seja, se uma data 01/03/2024 é comparado com uma data 25/01/2024 com o comando sort a primeira data estará na frente da segunda data. Portanto, no comando sort é utilizado a ordenação numérica na sexta coluna (lembrando que foi utilizado as tags para respeitarem os separadores do arquivo csv).
 
     ![Evidência](../Evidencias/ETAPA4_-_CRIACAO_DO_RELATORIO.png)
 
@@ -98,7 +98,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Etapa5"></a>
 
-5. ... [Etapa 5 - Primeiro e último item comprados relatorio$DATA_ARQUIVO](#Etapa5)
+5. ... [Etapa 5 - Primeiro e último itens comprados relatorio$DATA_ARQUIVO](#Etapa5)
 
     Depois de processado a ordenação, se imprime a segunda linha (por causa do cabeçalho) que irá consistir na primeira data do registro de venda e o último registro de venda contendo a data do mesmo (novamente é utilizado o comando BEGIN para adicionar as virgulas no output).
 
@@ -153,6 +153,20 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
     Após executado em quatro dias consecutivos o script, agora é gerado um relatório final com a junção dos quatro relatórios.
 
     ![Evidência](../Evidencias/ETAPA10_-_SEGUNDO_SCRIPT.png)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Observacoes"></a>
+
+11. ... [Observações](#Observacoes)
+
+    I. O relatório do dia 22/10/2024 teve um pequeno erro no começo da data que está no formato DD/MM/YYYY que não é o pedido pelo desafio, portanto, o problema foi arrumado no dia 24/10. O desafio pedia que o formato da data inicial fosse YYYY/MM/AA.
+
+    ![Evidência](../Evidencias/ANEXO3_-_PRIMEIRO_RELATORIO.png)
+
+    II. Durante o dia 23/10/2024 tive um problema ao rodar script que fornecia um relatório com output errado, porém o problema foi resolvido por um conflito com arquivo CSV e não com o código do programa.
+
+    ![Evidência](../Evidencias/ANEXO10_-_RELATORIO_GERADO_COM_CSV_BUGADO.png)
 
 [**Voltar ao Sumário**](#sumário)
 
