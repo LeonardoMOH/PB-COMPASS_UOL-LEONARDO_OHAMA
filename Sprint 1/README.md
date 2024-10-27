@@ -18,7 +18,7 @@
 
 # Resumo
 
-🐈‍ **Git Hub:** Durante o curso de Git e GitHub consegui aprender como utilizar pelo terminal do Git dar commit, push, clonar repositórios, manipular o markdown para criação de README,etc.
+🐈‍ **Git Hub:** Durante o curso de Git e GitHub consegui aprender como utilizar pelo terminal do Git dar commit, push, clonar repositórios, manipular o markdown para criação de README, criar páginas personalidas pelo GitHub pages etc.
 
 🐧 **Linux:** Com o curso de Linux consegui criar uma máquina virtual e instalar Linux Ubuntu nela, utilizar vários comandos no terminal sem uma interface gráfica (via terminal) para a criação e organização de diretórios, arquivos, gerenciamento de permissões de usuários, editores de texto, entre outros.
 

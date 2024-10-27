@@ -60,7 +60,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 1. ... [Etapa 1 - Criação do arquivo processamento_de_vendas.sh](#Etapa1)
 
-    Inicialmente cria-se o arquivo processamento_de_vendas.sh e move para a pasta raiz do projeto (Script1).
+    Inicialmente cria-se o arquivo processamento_de_vendas.sh com o comando touch, cria a permissão para executar o script usando o chmod e move-se para a pasta raiz do projeto com o comando mv.
     
     ![Evidência](../Evidencias/ETAPA1_-_CRIACAO_DO_SHELL_SCRIPT.png)
 
@@ -80,7 +80,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 3. ... [Etapa 3 - Criação de diretórios e organização de arquivos](#Etapa3)
 
-    Agora é criado o diretório ecommerce e o arquivo de dados_de_vendas.csv é movido para essa pasta, logo em seguida, as pastas vendas e backup são criados (obs: é utilizado a flag -p para evitar erro de criação de pasta já existente) e depois isso é movido o diretório de execução do script para que seja feito as execuções do comando para o backup do arquivo dados_de_vendas.csv que acabou de ser movido.
+    Agora é criado o diretório ecommerce com o mkdir e o arquivo de dados_de_vendas.csv é movido para essa pasta, logo em seguida, as pastas vendas e backup são criados (obs: é utilizado a flag -p para evitar erro de criação de pasta já existente) e depois isso é movido o diretório de execução do script para que seja feito as execuções do comando para o backup do arquivo dados_de_vendas.csv que acabou de ser movido.
 
     ![Evidência](../Evidencias/ETAPA3_-_CRIACAO_DE_DIRETORIOS_E_ORGANIZACAO.png)
 
@@ -90,7 +90,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 4. ... [Etapa 4 - Criação do relatorio$DATA_ARQUIVO](#Etapa4)
 
-    Agora é criado o relatório$DATA_ARQUIVO.txt que irá receber os outputs do arquivo processado dados_de_vendas. Primeiramente é feito o comando echo que irá registrar o dia e horário que fora registrado anteriormente e logo após isso é utilizado o comando awk para criar uma coluna auxiliar em um segundo arquivo para processar a ordenação do sort para isso no comando awk é imprimir todas as colunas já existentes e na sexta coluna é criado a coluna auxiliar que consiste na data no formato YYYYMMDD, pois utilizando o comando sort em uma data DD/MM/YYYY é ordenado somente pelo dia, ou seja, se uma data 01/03/2024 é comparado com uma data 25/01/2024 com o comando sort a primeira data estará na frente da segunda data. Portanto, no comando sort é utilizado a ordenação numérica na sexta coluna (lembrando que foi utilizado as tags para respeitarem os separadores do arquivo csv).
+    Agora é criado o relatório$DATA_ARQUIVO.txt que irá receber os outputs do arquivo processado (dados_de_vendas.csv) pelo shell script. Primeiramente é feito o comando echo que irá registrar o dia e horário que fora registrado anteriormente e logo após isso é utilizado o comando awk para criar uma coluna auxiliar em um segundo arquivo para processar a ordenação do sort, para isso no comando awk o objetivo é imprimir todas as colunas já existentes e na sexta coluna é criado a coluna auxiliar que consiste na data no formato YYYYMMDD, pois utilizando o comando sort em uma data DD/MM/YYYY, a coluna é ordenado somente pelo dia, ou seja, se uma data 01/03/2024 é comparado com uma data 25/01/2024 com o comando sort na ordenação crescente numérica, a primeira data (01/03/2024) estará na frente da segunda data (24/01/2024). Portanto, no comando sort é utilizado a ordenação crescente numérica na sexta coluna (lembrando que foi utilizado as tags para respeitarem os separadores do arquivo csv).
 
     ![Evidência](../Evidencias/ETAPA4_-_CRIACAO_DO_RELATORIO.png)
 
@@ -100,7 +100,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 5. ... [Etapa 5 - Primeiro e último itens comprados relatorio$DATA_ARQUIVO](#Etapa5)
 
-    Depois de processado a ordenação, se imprime a segunda linha (por causa do cabeçalho) que irá consistir na primeira data do registro de venda e o último registro de venda contendo a data do mesmo (novamente é utilizado o comando BEGIN para adicionar as virgulas no output).
+    Depois de processado a ordenação da tabela, se imprime a segunda linha (por causa do cabeçalho) que irá consistir na primeira data do registro de venda e o último registro de venda contendo a data do mesmo (novamente é utilizado o comando BEGIN para adicionar as vírgulas no output).
 
     ![Evidência](../Evidencias/ETAPA5_-_PRIMEIRO_E_ULTIMO_ITEM.png)
 
@@ -110,7 +110,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 6. ... [Etapa 6 - Total de itens e os 10 primeiros itens relatorio$DATA_ARQUIVO](#Etapa6)
 
-    Agora é contabilizado o número de itens diferentes e pegar as primeiras 10 linhas do arquivo csv, para isso foi utilizado o comando cut para filtrar as duplicadas na coluna 2 que corresponde ao nome do item, exemplo: camiseta e é utilizado o pipeline para um comando seguinte ter a saída do outro, sendo assim, primeiro é "selecionado" pela 2 coluna e em seguinda é tirado com o tail o cabeçalho da tabela e em seguida é utilizado o sort para conseguir tirar duplicatas com o comando uniq e finalmente é utilizado o wc para somar todos os itens restantes.
+    Agora é contabilizado o número de itens diferentes e pegar as primeiras 10 linhas do arquivo csv, para isso foi utilizado o comando cut para filtrar os duplicadas na coluna 2 que corresponde ao nome do item, exemplo: camiseta e é utilizado o pipeline para que um comando seguinte ter a saída do outro, sendo assim, o primeiro é "selecionado" pela 2 coluna e em seguinda é tirado com o tail o cabeçalho da tabela e depois disso, é utilizado o sort para conseguir tirar itens duplicados com o comando uniq e finalmente é utilizado o wc para somar todos os itens restantes.
 
     ![Evidência](../Evidencias/ETAPA6_-_TOTAL_E_OS_10_PRIMEIROS_ITENS.png)
 
@@ -120,7 +120,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 7. ... [Etapa 7 - Finalização do relatorio$DATA_ARQUIVO](#Etapa7)
 
-    É deletado o arquivo auxiliar que foi utilizado para ordenação dos itens e o relatório é movido para o diretório backup e logo após é movido o diretório de execução do script para compactar o arquivo backup-dados-$DATA_ARQUIVO.csv e é removido o arquivo csv, deixando só o arquivo compactado e logo após é deletado o arquivo dados_de_vendas.csv.
+    É deletado o arquivo auxiliar que foi utilizado para ordenação dos itens e o relatório movido para o diretório backup, logo após é movido o diretório de execução do script para compactar o arquivo backup-dados-$DATA_ARQUIVO.csv e em seguida é removido o arquivo csv, deixando apenas o arquivo compactado e para finalizar é deletado o arquivo dados_de_vendas.csv.
     
     ![Evidência](../Evidencias/ETAPA7_-_FINALIZACAO_DO_RELATORIO.png)
 
