@@ -2,6 +2,26 @@
 
 ### Desafio:
 
+1. [processamento_de_vendas.sh](Sprint1\processamento_de_vendas.sh)
+
+2. [consolidador_de_vendas.sh](Sprint1\ecommerce\vendas\backup\consolidador_de_processamento_de_vendas.sh)
+
+3. *[relatorio20241022.txt](Sprint1\ecommerce\vendas\backup\relatorio20241022.txt)
+
+4. *[relatorio20241023.txt](Sprint1\ecommerce\vendas\backup\relatorio20241023.txt)
+
+5. [relatorio20241024.txt](Sprint1\ecommerce\vendas\backup\relatorio20241024.txt)
+
+6. [relatorio20241025.txt](Sprint1\ecommerce\vendas\backup\relatorio20241025.txt)
+
+7. [relatorio20241026.txt](Sprint1\ecommerce\vendas\backup\relatorio20241026.txt)
+
+8. [relatorio20241027.txt](Sprint1\ecommerce\vendas\backup\relatorio20241027.txt)
+
+9. [relatorio_final.txt](Sprint1\ecommerce\vendas\backup\relatorio_final.txt)
+
+*[Observações](#Observacoes)
+
 1. [Etapas](#etapas)
 
     I.    [Etapa 1 - Criação do arquivo processamento_de_vendas.sh](#Etapa1)
@@ -23,6 +43,8 @@
     IX.   [Etapa 9 - crontab configuração](#Etapa9)
 
     X.    [Etapa 10 - Segundo script](#Etapa10)
+
+    XI.   [Observações](#Observacoes)
 
 2. [Anexos](#anexos)
 
@@ -154,13 +176,15 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
     ![Evidência](../Evidencias/ETAPA10_-_SEGUNDO_SCRIPT.png)
 
+    ![Evidêcia](../Evidencias/ETAPA11_-_RELATORIO_FINAL.png)
+
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Observacoes"></a>
 
 11. ... [Observações](#Observacoes)
 
-    I. O relatório do dia 22/10/2024 teve um pequeno erro no começo da data que está no formato DD/MM/YYYY que não é o pedido pelo desafio, portanto, o problema foi arrumado no dia 24/10. O desafio pedia que o formato da data inicial fosse YYYY/MM/AA.
+    I. O relatório do dia 22/10/2024 teve um pequeno erro no começo da data que está no formato DD/MM/YYYY que não é o pedido pelo desafio, portanto, o problema foi arrumado no dia 24/10 e foi feito um novo relatório no dia 27/10 com a correção. O desafio pedia que o formato da data inicial fosse YYYY/MM/AA.
 
     ![Evidência](../Evidencias/ANEXO3_-_PRIMEIRO_RELATORIO.png)
 

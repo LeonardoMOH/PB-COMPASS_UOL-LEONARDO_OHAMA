@@ -1,0 +1,17 @@
+Relatório do dia 2024/10/25 15:27:09
+Primeiro item comprado: 
+1,Smartphone,5,3524.47,16/07/2024
+Último item comprado: 
+50,Chaveiro Bluetooth,9,820.26,03/09/2024
+Número de itens diferentes: 50
+Primeiras 10 linhas do arquivo backup do dia 25/10/2024
+1,Smartphone,5,3524.47,16/07/2024
+2,Laptop,6,1319.31,17/07/2024
+3,Tablet,10,4575.39,18/07/2024
+4,Monitor,2,1869.32,19/07/2024
+5,Teclado,2,3572.47,20/07/2024
+6,Mouse,5,1894.98,21/07/2024
+7,Fone de Ouvido,9,1185.55,22/07/2024
+8,Caixa de Som,7,257.69,23/07/2024
+9,Carregador,2,1086.88,24/07/2024
+10,Impressora,8,1560.39,25/07/2024

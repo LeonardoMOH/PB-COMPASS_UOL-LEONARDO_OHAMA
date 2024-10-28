@@ -1,0 +1,17 @@
+Relatório do dia 2024/10/26 15:27:01
+Primeiro item comprado: 
+24,Aspirador,2,1318,05/01/2024
+Último item comprado: 
+52,Aquecedor,6,506,21/12/2024
+Número de itens diferentes: 10
+Primeiras 10 linhas do arquivo backup do dia 26/10/2024
+1,Aspirador,5,3666,07/10/2024
+2,Fone,10,4668,30/08/2024
+3,Secadora,5,2375,08/12/2024
+4,Fone,7,1648,02/05/2024
+5,Ferro de passar,3,3965,05/09/2024
+6,Batedeira,2,3385,31/07/2024
+7,Aquecedor,1,352,12/11/2024
+8,Secadora,4,469,12/03/2024
+9,Liquidificador,7,2457,09/02/2024
+10,Liquidificador,6,2524,07/12/2024

@@ -1,0 +1,17 @@
+Relatório do dia 2024/10/24 15:27:03
+Primeiro item comprado: 
+43,Fogão,4,2092,03/01/2024
+Último item comprado: 
+59,Cafeteira,8,821,20/12/2024
+Número de itens diferentes: 6
+Primeiras 10 linhas do arquivo backup do dia 24/10/2024
+1,Lavadora,4,568,18/03/2024
+2,Microondas,1,668,09/05/2024
+3,Geladeira,1,607,13/01/2024
+4,Geladeira,9,1614,25/06/2024
+5,Geladeira,7,3112,23/11/2024
+6,Lavadora,4,150,09/11/2024
+7,Geladeira,10,2483,21/10/2024
+8,Fogão,8,2893,26/08/2024
+9,Fogão,9,330,12/11/2024
+10,Microondas,3,4254,25/06/2024

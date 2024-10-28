@@ -1,0 +1,71 @@
+Relatório do dia 2024/10/24 15:27:03
+Primeiro item comprado: 
+43,Fogão,4,2092,03/01/2024
+Último item comprado: 
+59,Cafeteira,8,821,20/12/2024
+Número de itens diferentes: 6
+Primeiras 10 linhas do arquivo backup do dia 24/10/2024
+1,Lavadora,4,568,18/03/2024
+2,Microondas,1,668,09/05/2024
+3,Geladeira,1,607,13/01/2024
+4,Geladeira,9,1614,25/06/2024
+5,Geladeira,7,3112,23/11/2024
+6,Lavadora,4,150,09/11/2024
+7,Geladeira,10,2483,21/10/2024
+8,Fogão,8,2893,26/08/2024
+9,Fogão,9,330,12/11/2024
+10,Microondas,3,4254,25/06/2024
+=========================================================================
+Relatório do dia 2024/10/25 15:27:09
+Primeiro item comprado: 
+1,Smartphone,5,3524.47,16/07/2024
+Último item comprado: 
+50,Chaveiro Bluetooth,9,820.26,03/09/2024
+Número de itens diferentes: 50
+Primeiras 10 linhas do arquivo backup do dia 25/10/2024
+1,Smartphone,5,3524.47,16/07/2024
+2,Laptop,6,1319.31,17/07/2024
+3,Tablet,10,4575.39,18/07/2024
+4,Monitor,2,1869.32,19/07/2024
+5,Teclado,2,3572.47,20/07/2024
+6,Mouse,5,1894.98,21/07/2024
+7,Fone de Ouvido,9,1185.55,22/07/2024
+8,Caixa de Som,7,257.69,23/07/2024
+9,Carregador,2,1086.88,24/07/2024
+10,Impressora,8,1560.39,25/07/2024
+=========================================================================
+Relatório do dia 2024/10/26 15:27:01
+Primeiro item comprado: 
+24,Aspirador,2,1318,05/01/2024
+Último item comprado: 
+52,Aquecedor,6,506,21/12/2024
+Número de itens diferentes: 10
+Primeiras 10 linhas do arquivo backup do dia 26/10/2024
+1,Aspirador,5,3666,07/10/2024
+2,Fone,10,4668,30/08/2024
+3,Secadora,5,2375,08/12/2024
+4,Fone,7,1648,02/05/2024
+5,Ferro de passar,3,3965,05/09/2024
+6,Batedeira,2,3385,31/07/2024
+7,Aquecedor,1,352,12/11/2024
+8,Secadora,4,469,12/03/2024
+9,Liquidificador,7,2457,09/02/2024
+10,Liquidificador,6,2524,07/12/2024
+=========================================================================
+Relatório do dia 2024/10/27 15:27:01
+Primeiro item comprado: 
+1,camiseta,2,29.90,01/01/2023
+Último item comprado: 
+86,fone de ouvido profissional akg,3,300.00,27/03/2023
+Número de itens diferentes: 66
+Primeiras 10 linhas do arquivo backup do dia 27/10/2024
+1,camiseta,2,29.90,01/01/2023
+2,calça,5,80.00,02/01/2023
+3,sapato,3,100.00,03/01/2023
+4,meia,20,5.00,04/01/2023
+5,cinto,8,15.00,05/01/2023
+6,camisa,7,40.00,06/01/2023
+7,bermuda,6,50.00,07/01/2023
+8,tênis,4,120.00,08/01/2023
+9,bone,12,10.00,09/01/2023
+10,casaco,2,150.00,10/01/2023

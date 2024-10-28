@@ -1,0 +1,17 @@
+Relatório do dia 22/10/2024 15:27:01
+Primeiro item comprado: 
+1,camiseta,2,29.90,01/01/2023
+Último item comprado: 
+86,fone de ouvido profissional akg,3,300.00,27/03/2023
+Número de itens diferentes: 66
+Primeiras 10 linhas do arquivo backup do dia 22/10/2024
+1,camiseta,2,29.90,01/01/2023
+2,calça,5,80.00,02/01/2023
+3,sapato,3,100.00,03/01/2023
+4,meia,20,5.00,04/01/2023
+5,cinto,8,15.00,05/01/2023
+6,camisa,7,40.00,06/01/2023
+7,bermuda,6,50.00,07/01/2023
+8,tênis,4,120.00,08/01/2023
+9,bone,12,10.00,09/01/2023
+10,casaco,2,150.00,10/01/2023
