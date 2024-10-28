@@ -162,7 +162,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 9. ... [Etapa 9 - crontab configuração](#Etapa9)
 
-    Para a sua configuração é colocado para o crontab executar o processamento_de_vendas.sh às 15h27 nos dias terça-feira a sábado, vale ressaltar que no comando é mudado o diretório de execução para a pasta raiz da Sprint1, porque se caso não se faça isso o shell script vai tentar executar no diretório home.
+    Para a sua configuração é colocado para o crontab executar o processamento_de_vendas.sh às 15h27 nos dias quinta-feira a domingo, vale ressaltar que no comando é mudado o diretório de execução para a pasta raiz da Sprint1, porque se caso não se faça isso o shell script vai tentar executar no diretório home.
 
     ![Evidência](../Evidencias/ETAPA9_-_CRONTAB.png)
 
