@@ -192,6 +192,8 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
     ![Evidência](../Evidencias/ANEXO10_-_RELATORIO_GERADO_COM_CSV_BUGADO.png)
 
+    III. O arquivo do crontab está localizado no diretório /var/spool/cron/crontabs da VM Linux Ubuntu.
+
 [**Voltar ao Sumário**](#sumário)
 
 ## Anexos
