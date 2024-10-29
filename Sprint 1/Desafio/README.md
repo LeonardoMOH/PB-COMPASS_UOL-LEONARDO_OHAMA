@@ -20,6 +20,14 @@
 
 9. [relatorio_final.txt](Sprint1\ecommerce\vendas\backup\relatorio_final.txt)
 
+10. [dados_de_vendas.csv](Sprint1\dados_de_vendas\dados_de_vendas.csv)
+
+11. [dados_de_vendas2.csv](Sprint1\dados_de_vendas\dados_de_vendas2.csv)
+
+12. [dados_de_vendas3.csv](Sprint1\dados_de_vendas\dados_de_vendas3.csv)
+
+13. [dados_de_vendas4.csv](Sprint1\dados_de_vendas\dados_de_vendas4.csv)
+
 *[Observações](#Observacoes)
 
 1. [Etapas](#etapas)
@@ -193,6 +201,11 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
     ![Evidência](../Evidencias/ANEXO10_-_RELATORIO_GERADO_COM_CSV_BUGADO.png)
 
     III. O arquivo do crontab está localizado no diretório /var/spool/cron/crontabs da VM Linux Ubuntu.
+
+    IV. dados_de_vendas.csv = 27/10/2024
+        dados_de_vendas2.csv = 24/10/2024
+        dados_de_vendas3.csv = 25/10/2024
+        dados_de_vendas4.csv = 26/10/2024
 
 [**Voltar ao Sumário**](#sumário)
 
