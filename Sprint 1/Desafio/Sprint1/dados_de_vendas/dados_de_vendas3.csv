@@ -1,0 +1,51 @@
+id,produto,quantidade,preço,data
+1,Smartphone,5,3524.47,16/07/2024
+2,Laptop,6,1319.31,17/07/2024
+3,Tablet,10,4575.39,18/07/2024
+4,Monitor,2,1869.32,19/07/2024
+5,Teclado,2,3572.47,20/07/2024
+6,Mouse,5,1894.98,21/07/2024
+7,Fone de Ouvido,9,1185.55,22/07/2024
+8,Caixa de Som,7,257.69,23/07/2024
+9,Carregador,2,1086.88,24/07/2024
+10,Impressora,8,1560.39,25/07/2024
+11,Câmera Digital,9,1837.87,26/07/2024
+12,Headset,3,2113.48,27/07/2024
+13,Smartwatch,7,4127.64,28/07/2024
+14,Roteador,5,533.5,29/07/2024
+15,Projetor,4,4650.82,30/07/2024
+16,Leitor de E-book,7,4581.81,31/07/2024
+17,Console de Videogame,2,690.29,01/08/2024
+18,Joystick,4,2409.24,02/08/2024
+19,Placa de Vídeo,7,2608.86,03/08/2024
+20,SSD Externo,6,4231.64,04/08/2024
+21,Pendrive,4,3906.01,05/08/2024
+22,HD Externo,2,2497.97,06/08/2024
+23,Placa-mãe,9,2048.92,07/08/2024
+24,Processador,2,4677.78,08/08/2024
+25,Memória RAM,3,1869.09,09/08/2024
+26,Notebook,6,1695.03,10/08/2024
+27,Cabo HDMI,3,501.54,11/08/2024
+28,Bateria Externa,1,1563.9,12/08/2024
+29,Microfone,6,1475.4,13/08/2024
+30,Webcam,1,365.03,14/08/2024
+31,Switch de Rede,2,668.38,15/08/2024
+32,Adaptador Bluetooth,1,474.31,16/08/2024
+33,Caixa Organizadora,9,4182.28,17/08/2024
+34,Hub USB,8,1820.81,18/08/2024
+35,Powerline,1,2192,19/08/2024
+36,Extensor de Wi-Fi,9,4463.31,20/08/2024
+37,Mousepad,6,1684.35,21/08/2024
+38,Fonte de Alimentação,9,2633.83,22/08/2024
+39,Cooler,9,1738.36,23/08/2024
+40,Antena de TV,7,207.19,24/08/2024
+41,Home Theater,9,2416.05,25/08/2024
+42,Smart TV,1,2374.48,26/08/2024
+43,Câmera de Segurança,1,1650.07,27/08/2024
+44,Drone,7,1104,28/08/2024
+45,Controle Remoto,10,2045.52,29/08/2024
+46,Alto-Falante,9,325.59,30/08/2024
+47,Controle de VR,4,2950.78,31/08/2024
+48,Amplificador,4,2488.58,01/09/2024
+49,Lâmpada Inteligente,1,2313.43,02/09/2024
+50,Chaveiro Bluetooth,9,820.26,03/09/2024
