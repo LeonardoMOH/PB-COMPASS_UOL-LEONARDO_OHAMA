@@ -1,4 +1,8 @@
-DROP TABLE tb_locacao_atual
+DROP TABLE tb_locacao_atual, tb_cliente, tb_vendedor, tb_combustivel, tb_carro
+
+-- Criacao de tabelas 
+
+-- Tabela que contem as informacoes de locacao com o idlocacao como primary key (PK) e os outros IDs como chaves estrangeiras (FK)
 
 CREATE TABLE tb_locacao_atual (
 	idLocacao int primary key,
@@ -19,6 +23,8 @@ CREATE TABLE tb_locacao_atual (
 	FOREIGN KEY (idCarro) REFERENCES tb_carro(idCarro)
 );
 
+-- Tabela cliente com as informacoes relacionadas ao cliente
+
 CREATE TABLE tb_cliente (
 	idCliente int primary key,
 	nomeCliente varchar(100),
@@ -27,6 +33,7 @@ CREATE TABLE tb_cliente (
  	paisCliente     varchar(40)
 );
 
+-- Tabela com informacoes do vendedor
 
 CREATE TABLE tb_vendedor (
 	idVendedor      int primary key,
@@ -35,10 +42,14 @@ CREATE TABLE tb_vendedor (
 	estadoVendedor  varchar(40)
 );
 
+-- Tabela com o tipo de gasolina
+
 CREATE TABLE tb_combustivel (
  	idcombustivel   int primary key,
  	tipoCombustivel varchar(20)
 );
+
+-- Tabela que contem as informacoes do carro
 
 CREATE TABLE tb_carro (
  	idCarro  		int primary key,
@@ -47,6 +58,8 @@ CREATE TABLE tb_carro (
 	modeloCarro     varchar(80),
 	anoCarro        int
 );
+
+-- Inserindo os dados da tabela antiga nas novas criadas
 
 INSERT INTO tb_locacao_atual (idLocacao, kmCarro, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega, idCliente, idVendedor, idcombustivel,idCarro) 
 SELECT DISTINCT
@@ -101,11 +114,18 @@ SELECT DISTINCT
 FROM tb_locacao
 ORDER BY idCarro;
 
-SELECT idCliente, COUNT(*) 
-FROM tb_locacao tl 
-GROUP BY idCliente
-HAVING COUNT(*) > 1;
+-- Verificacao se as tabelas tiveram os seus valores inseridos
+
+SELECT * FROM tb_locacao_atual
 
 SELECT * FROM tb_cliente
 
+SELECT * FROM tb_vendedor
+
+SELECT * FROM tb_combustivel
+
+SELECT * FROM tb_carro
+
 SELECT * FROM tb_locacao
+
+-- Criacao do modelo dimensional por meio de Views
