@@ -1,6 +1,6 @@
 # Sumário
 
-### Sprint 1:
+### Sprint 2:
 
 1. [Resumo](#resumo)
 
@@ -38,6 +38,10 @@
 
     XVI.  [Exercício 16](#Exercício16)
 
+    XVII. [Exercício Exportação 1](#Exercício_exp_1)
+
+    XVIII.[Exercício Exportação 2](#Exercício_exp_2)
+
 3. [Evidências](#evidências)
 
 4. [Certificados](#certificados)
@@ -56,9 +60,9 @@
 
 [**Voltar ao Sumário**](#sumário)
 
-# Exercícios
+# Exercícios 🥋
 
-## Caso de Estudo: Biblioteca
+## Caso de Estudo: Biblioteca 📖
 
 <a id="Exercício01"></a>
 
@@ -66,7 +70,9 @@
 
 Apresente a query para listar todos os livros publicados após 2014. Ordenar pela coluna cod, em ordem crescente, as linhas.  Atenção às colunas esperadas no resultado final: cod, titulo, autor, editora, valor, publicacao, edicao, idioma.
 
-[Solução Exercício 01](Exercicios/SPRINT_02_E01.sql)
+[Solução SQL Exercício 01](Exercicios/SPRINT_02_E01.sql)
+
+[Resultado Exercício 01](#Exercício01_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -76,7 +82,9 @@ Apresente a query para listar todos os livros publicados após 2014. Ordenar pel
 
 Apresente a query para listar os 10 livros mais caros. Ordenar as linhas pela coluna valor, em ordem decrescente.  Atenção às colunas esperadas no resultado final:  titulo, valor.
 
-[Solução Exercício 02](Exercicios/SPRINT_02_E02.sql)
+[Solução SQL Exercício 02](Exercicios/SPRINT_02_E02.sql)
+
+[Resultado Exercício 02](#Exercício02_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -86,7 +94,9 @@ Apresente a query para listar os 10 livros mais caros. Ordenar as linhas pela co
 
 Apresente a query para listar as 5 editoras com mais livros na biblioteca. O resultado deve conter apenas as colunas quantidade, nome, estado e cidade. Ordenar as linhas pela coluna que representa a quantidade de livros em ordem decrescente.
 
-[Solução Exercício 03](Exercicios/SPRINT_02_E03.sql)
+[Solução SQL Exercício 03](Exercicios/SPRINT_02_E03.sql)
+
+[Resultado Exercício 03](#Exercício03_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -96,7 +106,9 @@ Apresente a query para listar as 5 editoras com mais livros na biblioteca. O res
 
 Apresente a query para listar a quantidade de livros publicada por cada autor. Ordenar as linhas pela coluna nome (autor), em ordem crescente. Além desta, apresentar as colunas codautor, nascimento e quantidade (total de livros de sua autoria).
 
-[Solução Exercício 04](Exercicios/SPRINT_02_E04.sql)
+[Solução SQL Exercício 04](Exercicios/SPRINT_02_E04.sql)
+
+[Resultado Exercício 04](#Exercício04_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -106,7 +118,9 @@ Apresente a query para listar a quantidade de livros publicada por cada autor. O
 
 Apresente a query para listar o nome dos autores que publicaram livros através de editoras NÃO situadas na região sul do Brasil. Ordene o resultado pela coluna nome, em ordem crescente. Não podem haver nomes repetidos em seu retorno.
 
-[Solução Exercício 05](Exercicios/SPRINT_02_E05.sql)
+[Solução SQL Exercício 05](Exercicios/SPRINT_02_E05.sql)
+
+[Resultado Exercício 05](#Exercício05_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -116,7 +130,9 @@ Apresente a query para listar o nome dos autores que publicaram livros através 
 
 Apresente a query para listar o autor com maior número de livros publicados. O resultado deve conter apenas as colunas codautor, nome, quantidade_publicacoes.
 
-[Solução Exercício 06](Exercicios/SPRINT_02_E06.sql)
+[Solução SQL Exercício 06](Exercicios/SPRINT_02_E06.sql)
+
+[Resultado Exercício 06](#Exercício06_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -126,7 +142,9 @@ Apresente a query para listar o autor com maior número de livros publicados. O 
 
 Apresente a query para listar o nome dos autores com nenhuma publicação. Apresentá-los em ordem crescente.
 
-[Solução Exercício 07](Exercicios/SPRINT_02_E07.sql)
+[Solução SQL Exercício 07](Exercicios/SPRINT_02_E07.sql)
+
+[Resultado Exercício 07](#Exercício07_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -138,7 +156,9 @@ Apresente a query para listar o nome dos autores com nenhuma publicação. Apres
 
 Apresente a query para listar o código e o nome do vendedor com maior número de vendas (contagem), e que estas vendas estejam com o status concluída.  As colunas presentes no resultado devem ser, portanto, cdvdd e nmvdd.
 
-[Solução Exercício 08](Exercicios/SPRINT_02_E08.sql)
+[Solução SQL Exercício 08](Exercicios/SPRINT_02_E08.sql)
+
+[Resultado Exercício 08](#Exercício08_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -148,7 +168,9 @@ Apresente a query para listar o código e o nome do vendedor com maior número d
 
 Apresente a query para listar o código e nome do produto mais vendido entre as datas de 2014-02-03 até 2018-02-02, e que estas vendas estejam com o status concluída. As colunas presentes no resultado devem ser cdpro e nmpro.
 
-[Solução Exercício 09](Exercicios/SPRINT_02_E09.sql)
+[Solução SQL Exercício 09](Exercicios/SPRINT_02_E09.sql)
+
+[Resultado Exercício 09](#Exercício09_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -162,7 +184,9 @@ Com base em tais informações, calcule a comissão de todos os vendedores, cons
 
 As colunas presentes no resultado devem ser vendedor, valor_total_vendas e comissao. O valor de comissão deve ser apresentado em ordem decrescente arredondado na segunda casa decimal.
 
-[Solução Exercício 10](Exercicios/SPRINT_02_E10.sql)
+[Solução SQL Exercício 10](Exercicios/SPRINT_02_E10.sql)
+
+[Resultado Exercício 10](#Exercício10_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -172,7 +196,9 @@ As colunas presentes no resultado devem ser vendedor, valor_total_vendas e comis
 
 Apresente a query para listar o código e nome cliente com maior gasto na loja. As colunas presentes no resultado devem ser cdcli, nmcli e gasto, esta última representando o somatório das vendas (concluídas) atribuídas ao cliente.
 
-[Solução Exercício 11](Exercicios/SPRINT_02_E11.sql)
+[Solução SQL Exercício 11](Exercicios/SPRINT_02_E11.sql)
+
+[Resultado Exercício 11](#Exercício11_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -185,7 +211,9 @@ Apresente a query para listar código, nome e data de nascimento dos dependentes
 
 Observação: Apenas vendas com status concluído.
 
-[Solução Exercício 12](Exercicios/SPRINT_02_E12.sql)
+[Solução SQL Exercício 12](Exercicios/SPRINT_02_E12.sql)
+
+[Resultado Exercício 12](#Exercício12_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -195,7 +223,9 @@ Observação: Apenas vendas com status concluído.
 
 Apresente a query para listar os 10 produtos menos vendidos pelos canais de E-Commerce ou Matriz (Considerar apenas vendas concluídas).  As colunas presentes no resultado devem ser cdpro, nmcanalvendas, nmpro e quantidade_vendas.
 
-[Solução Exercício 13](Exercicios/SPRINT_02_E13.sql)
+[Solução SQL Exercício 13](Exercicios/SPRINT_02_E13.sql)
+
+[Resultado Exercício 13](#Exercício13_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -207,7 +237,9 @@ Apresente a query para listar o gasto médio por estado da federação. As colun
 
 Observação: Apenas vendas com status concluído.
 
-[Solução Exercício 14](Exercicios/SPRINT_02_E14.sql)
+[Solução SQL Exercício 14](Exercicios/SPRINT_02_E14.sql)
+
+[Resultado Exercício 14](#Exercício14_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -217,7 +249,9 @@ Observação: Apenas vendas com status concluído.
 
 Apresente a query para listar os códigos das vendas identificadas como deletadas. Apresente o resultado em ordem crescente.
 
-[Solução Exercício 15](Exercicios/SPRINT_02_E15.sql)
+[Solução SQL Exercício 15](Exercicios/SPRINT_02_E15.sql)
+
+[Resultado Exercício 15](#Exercício15_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -229,16 +263,234 @@ Apresente a query para listar a quantidade média vendida de cada produto agrupa
 
 Obs: Somente vendas concluídas.
 
-[Solução Exercício 16](Exercicios/SPRINT_02_E16.sql)
+[Solução SQL Exercício 16](Exercicios/SPRINT_02_E16.sql)
+
+[Resultado Exercício 16](#Exercício16_1)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício_exp_1"></a>
+
+### Exercício Exportação 1
+
+Exportar o resultado da query que obtém os 10 livros mais caros para um arquivo CSV. Utiizar o caractere ; (ponto e vírgula) como separador. Lembre-se que o conteúdo do seu arquivo deverá respoeitar a sequência de colunas e seus respectivos nomes de cabeçalho que listamos abaixo: CodLivro, Titulo, CodAutor, NomeAutor, Valor, CodEditora, NomeEditora. Observação: O arquivo exportado, conforme as especificações acima, deve ser disponibilizado no GitHub.
+
+[Solução SQL Exercício Exportação 1](Exercicios\SPRINT_02_E02_02.sql)
+
+[Solução CSV Exercício Exportação 1](Exercicios\SPRINT_02_E02_02.csv)
+
+[Resultado Exercício Exportação 1](#Exercício_exp_1_1)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício_exp_2"></a>
+
+### Exercício Exportação 2
+
+Exportar o resultado da query que obtém as 5 editoras com maior quantidade de livros na biblioteca para um arquivo CSV. Utilizar o caractere | (pipe) como separador. Lembre-se que o conteúdo do seu arquivo deverá respeitar a sequência de colunas e seus respectivos nomes de cabeçalho que listamos abaixo: CodEditora, NomeEditora, QuantidadeLivros. Observação: O arquivo exportado, conforme as especificações acima, deve ser disponibilizado no GitHub.
+
+[Solução SQL Exercício Exportação 2](Exercicios\SPRINT_02_E03_02.sql)
+
+[Solução CSV Exercício Exportação 2](Exercicios\SPRINT_02_E03_02.csv)
+
+[Resultado Exercício Exportação 2](#Exercício_exp_2_1)
 
 [**Voltar ao Sumário**](#sumário)
 
 # Evidências
 
+## Desafio
+
 [Evidências Desafio](<Desafio/README.md#etapas>)
 
 [**Voltar ao Sumário**](#sumário)
 
+## Exercícios
+
+<a id="Exercício01_1"></a>
+
+### Exercício 01
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E01.png>)
+
+[**Voltar ao Exercício 01**](#Exercício01)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício02_1"></a>
+
+### Exercício 02
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E02.png>)
+
+[**Voltar ao Exercício 02**](#Exercício02)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício03_1"></a>
+
+### Exercício 03
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E03.png>)
+
+[**Voltar ao Exercício 03**](#Exercício03)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício04_1"></a>
+
+### Exercício 04
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E04.png>)
+
+[**Voltar ao Exercício 04**](#Exercício04)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício05_1"></a>
+
+### Exercício 05
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E05.png>)
+
+[**Voltar ao Exercício 05**](#Exercício05)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício06_1"></a>
+
+### Exercício 06
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E06.png>)
+
+[**Voltar ao Exercício 06**](#Exercício06)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício07_1"></a>
+
+### Exercício 07
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E07.png>)
+
+[**Voltar ao Exercício 07**](#Exercício07)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício08_1"></a>
+
+### Exercício 08
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E08.png>)
+
+[**Voltar ao Exercício 08**](#Exercício08)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício09_1"></a>
+
+### Exercício 09
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E09.png>)
+
+[**Voltar ao Exercício 09**](#Exercício09)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício10_1"></a>
+
+### Exercício 10
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E10.png>)
+
+[**Voltar ao Exercício 10**](#Exercício10)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício11_1"></a>
+
+### Exercício 11
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E11.png>)
+
+[**Voltar ao Exercício 11**](#Exercício11)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício12_1"></a>
+
+### Exercício 12
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E12.png>)
+
+[**Voltar ao Exercício 12**](#Exercício12)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício13_1"></a>
+
+### Exercício 13
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E13.png>)
+
+[**Voltar ao Exercício 13**](#Exercício13)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício14_1"></a>
+
+### Exercício 14
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E14.png>)
+
+[**Voltar ao Exercício 14**](#Exercício14)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício15_1"></a>
+
+### Exercício 15
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E15.png>)
+
+[**Voltar ao Exercício 15**](#Exercício15)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício16_1"></a>
+
+### Exercício 16
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E16.png>)
+
+[**Voltar ao Exercício 16**](#Exercício16)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício_exp_1_1"></a>
+
+### Exercício Exportação 1
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E02_02.png>)
+
+[**Voltar ao Exercício Exportação 1**](#Exercício_exp_1)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício_exp_2_1"></a>
+
+### Exercício Exportação 2
+
+![Resultado](<Evidencias\Exercicios\SPRINT_02_E03_02.png>)
+
+[**Voltar ao Exercício Exportação 2**](#Exercício_exp_2)
+
+[**Voltar ao Sumário**](#sumário)
+
 # Certificados
+
+[AWS Partner: Sales Accreditation (Business) (Portuguese) PDF](<Certificados\AWS Partner Sales Accreditation (Business) (Portuguese).pdf>)
+
+![AWS Partner: Sales Accreditation (Business) (Portuguese)](<Certificados\AWS Partner Sales Accreditation (Business) (Portuguese).png>)
 
 [**Voltar ao Sumário**](#sumário)
