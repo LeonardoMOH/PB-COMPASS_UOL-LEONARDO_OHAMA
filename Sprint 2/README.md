@@ -56,7 +56,7 @@
 
 📊‍ **SQL:** No curso de SQL, eu aprendi vários comandos para manipulação de tabelas, como SELECT, JOIN, UNION etc. E os operadores AND, OR, BETWEEN etc. No final do curso foi proposto exercícios para praticar o primeiro foi dos exercícios 01 ao 07 com o estudo de caso da biblioteca, os exercícios do 08 ao 16 foi o estudo de caso da loja e o exercício II que consistia em exportar os dados da tabela em formato csv com diferente separadores.
 
-🎯 **Desafio** 
+🎯 **Desafio** O desafio consiste em normalizar os dados da tabela tb_locacao que contém todos os dados das tabelas IDs do arquivo concessionaria com o Modelo Relacional e depois montar com base nesse modelo normalizado o Modelo Dimensional.
 
 [**Voltar ao Sumário**](#sumário)
 

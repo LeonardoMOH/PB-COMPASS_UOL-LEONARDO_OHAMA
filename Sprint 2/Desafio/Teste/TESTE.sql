@@ -1,4 +1,23 @@
-DROP TABLE tb_cliente
+DROP TABLE tb_locacao_atual
+
+CREATE TABLE tb_locacao_atual (
+	idLocacao int primary key,
+	kmCarro         int,
+	dataLocacao     datetime,
+ 	horaLocacao     time,
+	qtdDiaria       int,
+	vlrDiaria       decimal(18,2),
+ 	dataEntrega     date,
+	horaEntrega     time,
+	idCliente 		int,
+	idVendedor      int,
+	idcombustivel   int,
+	idCarro  		int,
+	FOREIGN KEY (idCliente) REFERENCES tb_cliente(idCliente),
+	FOREIGN KEY (idVendedor) REFERENCES tb_vendedor(idVendedor),
+	FOREIGN KEY (idcombustivel) REFERENCES tb_combustivel(idcombustivel),
+	FOREIGN KEY (idCarro) REFERENCES tb_carro(idCarro)
+);
 
 CREATE TABLE tb_cliente (
 	idCliente int primary key,
@@ -28,7 +47,24 @@ CREATE TABLE tb_carro (
 	modeloCarro     varchar(80),
 	anoCarro        int
 );
- 	
+
+INSERT INTO tb_locacao_atual (idLocacao, kmCarro, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega, idCliente, idVendedor, idcombustivel,idCarro) 
+SELECT DISTINCT
+	idLocacao,
+	kmCarro,
+	dataLocacao,
+	horaLocacao,
+	qtdDiaria,
+	vlrDiaria,
+	dataEntrega,
+	horaEntrega,
+	idCliente,
+	idVendedor,
+	idcombustivel,
+	idCarro
+FROM tb_locacao
+ORDER BY idLocacao;
+
 INSERT INTO tb_cliente (idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente) 
 SELECT DISTINCT
 	idCliente,
