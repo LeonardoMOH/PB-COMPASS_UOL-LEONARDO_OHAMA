@@ -1,5 +1,3 @@
-DROP TABLE tb_locacao_atual, tb_cliente, tb_vendedor, tb_combustivel, tb_carro
-
 -- Criacao de tabelas 
 
 -- Tabela que contem as informacoes de locacao com o idlocacao como primary key (PK) e os outros IDs como chaves estrangeiras (FK)
@@ -15,11 +13,9 @@ CREATE TABLE tb_locacao_atual (
 	horaEntrega     time,
 	idCliente 		int,
 	idVendedor      int,
-	idcombustivel   int,
 	idCarro  		int,
 	FOREIGN KEY (idCliente) REFERENCES tb_cliente(idCliente),
 	FOREIGN KEY (idVendedor) REFERENCES tb_vendedor(idVendedor),
-	FOREIGN KEY (idcombustivel) REFERENCES tb_combustivel(idcombustivel),
 	FOREIGN KEY (idCarro) REFERENCES tb_carro(idCarro)
 );
 
@@ -54,14 +50,21 @@ CREATE TABLE tb_combustivel (
 CREATE TABLE tb_carro (
  	idCarro  		int primary key,
  	classiCarro     varchar(50),
-	marcaCarro      varchar(80),
 	modeloCarro     varchar(80),
-	anoCarro        int
+	anoCarro        int,
+	idcombustivel   int,
+	FOREIGN KEY (idcombustivel) REFERENCES tb_combustivel(idcombustivel),
+	FOREIGN KEY (modeloCarro) REFERENCES tb_marca(modeloCarro)
+);
+
+CREATE TABLE tb_marca (
+	modeloCarro     varchar(80) primary key,
+	marcaCarro      varchar(80)
 );
 
 -- Inserindo os dados da tabela antiga nas novas criadas
 
-INSERT INTO tb_locacao_atual (idLocacao, kmCarro, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega, idCliente, idVendedor, idcombustivel,idCarro) 
+INSERT INTO tb_locacao_atual (idLocacao, kmCarro, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega, idCliente, idVendedor, idCarro) 
 SELECT DISTINCT
 	idLocacao,
 	kmCarro,
@@ -73,7 +76,6 @@ SELECT DISTINCT
 	horaEntrega,
 	idCliente,
 	idVendedor,
-	idcombustivel,
 	idCarro
 FROM tb_locacao
 ORDER BY idLocacao;
@@ -104,28 +106,51 @@ SELECT DISTINCT
 FROM tb_locacao
 ORDER BY idcombustivel;
 
-INSERT INTO tb_carro (idCarro, classiCarro, marcaCarro, modeloCarro, anoCarro) 
+INSERT INTO tb_carro (idCarro, classiCarro, modeloCarro, anoCarro, idcombustivel) 
 SELECT DISTINCT
 	idCarro,
 	classiCarro,
-	marcaCarro,
 	modeloCarro,
-	anoCarro
+	anoCarro,
+	idcombustivel
 FROM tb_locacao
 ORDER BY idCarro;
 
--- Verificacao se as tabelas tiveram os seus valores inseridos
+INSERT INTO tb_marca (modeloCarro, marcaCarro) 
+SELECT DISTINCT
+	modeloCarro,
+	marcaCarro
+FROM tb_locacao
+ORDER BY modeloCarro;
 
-SELECT * FROM tb_locacao_atual
+-- Verificacao se as tabelas tiveram os seus valores inseridos (tirar o comentario para executar o SELECT)
 
-SELECT * FROM tb_cliente
+--SELECT * FROM tb_locacao_atual;
 
-SELECT * FROM tb_vendedor
+--SELECT * FROM tb_cliente;
 
-SELECT * FROM tb_combustivel
+--SELECT * FROM tb_vendedor;
 
-SELECT * FROM tb_carro
+--SELECT * FROM tb_combustivel;
 
-SELECT * FROM tb_locacao
+--SELECT * FROM tb_carro;
+
+--SELECT * FROM tb_locacao;
+
+--SELECT * FROM tb_marca;
+
+-- Comando para deletar alguma tabela desejada (tirar o comentario para deletar a tabela respectiva)
+
+--DROP TABLE tb_locacao_atual;
+
+--DROP TABLE tb_cliente;
+
+--DROP TABLE tb_vendedor;
+
+--DROP TABLE tb_combustivel;
+
+--DROP TABLE tb_carro;
+
+--DROP TABLE tb_marca;
 
 -- Criacao do modelo dimensional por meio de Views
