@@ -32,17 +32,17 @@
 
 1. [Etapas](#etapas)
 
-    I.    [Etapa 1 - Criação do arquivo processamento_de_vendas.sh](#Etapa1)
+    I.    [Etapa 1 - Verificação dos dados da tabela](#Etapa1)
 
-    II.   [Etapa 2 - Interpretador, datas e horários](#Etapa2)
+    II.   [Etapa 2 - Tratamento de dados](#Etapa2)
 
-    III.  [Etapa 3 - Criação de diretórios e organização de arquivos](#Etapa3)
+    III.  [Etapa 3 - Criação de uma tabela auxiliar e o primeiro tratamento de dados](#Etapa3)
 
-    IV.   [Etapa 4 - Criação do relatorio$DATA_ARQUIVO](#Etapa4)
+    IV.   [Etapa 4 - Finalização do tratamento de dados](#Etapa4)
 
-    V.    [Etapa 5 - Primeiro e último itens comprados relatorio$DATA_ARQUIVO](#Etapa5)
+    V.    [Etapa 5 - Criação das tabelas e normalização](#Etapa5)
 
-    VI.   [Etapa 6 - Total de itens e os 10 primeiros itens relatorio$DATA_ARQUIVO](#Etapa6)
+    VI.   [Etapa 6 - Inserção dos dados nas novas tabelas](#Etapa6)
 
     VII.  [Etapa 7 - Finalização do relatorio$DATA_ARQUIVO](#Etapa7)
 
@@ -56,15 +56,15 @@
 
 2. [Anexos](#anexos)
 
-    I.    [Anexo 1 - Código](#Anexo1)
+    I.    [Anexo 1 - Tabela Locacao Relacional](#Anexo1)
 
-    II.   [Anexo 2 - Código](#Anexo2)
+    II.   [Anexo 2 - Tabela Carro Relacional](#Anexo2)
 
-    III.  [Anexo 3 - Relatório feito no primeiro dia](#Anexo3)
+    III.  [Anexo 3 - Tabela Cliente Relacional](#Anexo3)
 
-    IV.   [Anexo 4 - Comando history](#Anexo4)
+    IV.   [Anexo 4 - Tabela Vendedor Relacional](#Anexo4)
 
-    V.    [Anexo 5 - Primeiros outputs testes](#Anexo5)
+    V.    [Anexo 5 - Tabela Combustivel Relacional](#Anexo5)
 
     VI.   [Anexo 6 - Primeiros outputs testes 2](#Anexo6)
 
@@ -88,61 +88,68 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Etapa1"></a>
 
-1. ... [Etapa 1 - Criação do arquivo processamento_de_vendas.sh](#Etapa1)
+1. ... [Etapa 1 - Verificação dos dados da tabela](#Etapa1)
 
-    Inicialmente cria-se o arquivo processamento_de_vendas.sh com o comando touch, cria a permissão para executar o script usando o chmod e move-se para a pasta raiz do projeto com o comando mv.
+    Inicialmente verifica-se os dados que contém na tabela (tb_locacao) e percebe-se alguns dados que devem ser tratados antes de começar o processo de normalização (a imagem representa apenas uma parte dela, os dados que serão tratados vão ser mostrados na etapa seguinte).
     
-    ![Evidência](../Evidencias/ETAPA1_-_CRIACAO_DO_SHELL_SCRIPT.png)
+    ![Evidência](../Evidencias/Desafio/ETAPA1_-_TABELA_INICIAL.png)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Etapa2"></a>
 
-2. ... [Etapa 2 - Interpretador, datas e horários](#Etapa2)
+2. ... [Etapa 2 - Tratamento de dados](#Etapa2)
 
-    Após criado o arquivo, é escrito o interpretador do script no arquivo shell e é criado as variáveis para guardar as horas e as datas de execução do script.
+    As colunas dataLocacao e dataEntrega aparecem em um formato não desejado (YYYYMMDD) para datas e diferente dos exercícios feitos no SQL que estão no formato YYYY-MM-DD e a coluna de horaLocacao alguns horários estão no formato H:MM e não no formato HH:MM, finalmente a coluna sexoVendedor está em um "formato binário", para uma melhor visualização dos dados será trocado por M que corresponde ao sexo masculino e F para o sexo feminino.
 
-    ![Evidência](../Evidencias/ETAPA2_-_INTERPRETADOR_DATAS_HORARIOS.png)
+    ![Evidência](../Evidencias/Desafio/ETAPA2_-_TABELA_TRATAMENTO_DADOS.png)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Etapa3"></a>
 
-3. ... [Etapa 3 - Criação de diretórios e organização de arquivos](#Etapa3)
+3. ... [Etapa 3 - Criação de uma tabela auxiliar e o primeiro tratamento de dados](#Etapa3)
 
-    Agora é criado o diretório ecommerce com o mkdir e o arquivo de dados_de_vendas.csv é movido para essa pasta, logo em seguida, as pastas vendas e backup são criados (obs: é utilizado a flag -p para evitar erro de criação de pasta já existente) e depois isso é movido o diretório de execução do script para que seja feito as execuções do comando para o backup do arquivo dados_de_vendas.csv que acabou de ser movido.
+    Primeiro é importante ressaltar que no SQLITE é difícil de utilizar o comando ALTER TABLE para alterar a tabela, por isso foi decidido que é necessário criar tabelas novas. Para isso foi criado uma tabela auxiliar e cópia a original para que caso haja perda de dados ou alterações errôneas esses dados da tabela sejam mantidos, pois irá se utilizar o comando UPDATE que irá alterar os valores da tabela original e logo após isso executamos o comando UPDATE com o auxílio da função printf que coloca o "formato" de saída desejado que é YYYY-MM-DD e juntamente com a função SUBSTR que retorna uma string a partir da posição dada e o tamanho dela.
 
-    ![Evidência](../Evidencias/ETAPA3_-_CRIACAO_DE_DIRETORIOS_E_ORGANIZACAO.png)
+    ![Evidência](../Evidencias/Desafio/ETAPA3_-_TABELA_TRATAMENTO_DATA.png)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Etapa4"></a>
 
-4. ... [Etapa 4 - Criação do relatorio$DATA_ARQUIVO](#Etapa4)
+4. ... [Etapa 4 - Finalização do tratamento de dados](#Etapa4)
 
-    Agora é criado o relatório$DATA_ARQUIVO.txt que irá receber os outputs do arquivo processado (dados_de_vendas.csv) pelo shell script. Primeiramente é feito o comando echo que irá registrar o dia e horário que fora registrado anteriormente e logo após isso é utilizado o comando awk para criar uma coluna auxiliar em um segundo arquivo para processar a ordenação do sort, para isso no comando awk o objetivo é imprimir todas as colunas já existentes e na sexta coluna é criado a coluna auxiliar que consiste na data no formato YYYYMMDD, pois utilizando o comando sort em uma data DD/MM/YYYY, a coluna é ordenado somente pelo dia, ou seja, se uma data 01/03/2024 é comparado com uma data 25/01/2024 com o comando sort na ordenação crescente numérica, a primeira data (01/03/2024) estará na frente da segunda data (24/01/2024). Portanto, no comando sort é utilizado a ordenação crescente numérica na sexta coluna (lembrando que foi utilizado as tags para respeitarem os separadores do arquivo csv).
+    Agora é feito o tratamento de dados referente às horas que começa com o comando UPDATE e também se utiliza a função printf que foi dito anteriormente, só que agora o formato será HH:MM e logo se utiliza a função CAST para que os números sejam retornados como inteiro, pois se caso não se faça isso o horário irá retornar como H:MM para alguns horários e também se utiliza o comando SUBSTR que vai pegar a string e retornar a posição inicial que é dada até o tamanho que se deseja e também utilizada a função INSTR que é necessária diferentemente do tratamento anterior, porque no tratamento anterior não havia um problema de data no dia que em vez de retornar 01, ele retorna 1. E essa função tem o objetivo de encontrar até o separador ":" subtraindo uma unidade para que o tamanho da função SUBSTR seja até às horas, é feito esse mesmo procedimento para os minutos.
+    Para o sexoVendedor também é utilizado o comando UPDATE em conjunto com o comando CASE que irá substituir o valor toda vez que corresponda ao valor dado, que no caso o "0" corresponde ao "M" e o "1" corresponde ao "F". Por fim é finalizado os dados inconsistentes da tabela.
 
-    ![Evidência](../Evidencias/ETAPA4_-_CRIACAO_DO_RELATORIO.png)
+    ![Evidência](../Evidencias/Desafio/ETAPA4_-_TABELA_TRATAMENTO_FINAL.png)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Etapa5"></a>
 
-5. ... [Etapa 5 - Primeiro e último itens comprados relatorio$DATA_ARQUIVO](#Etapa5)
+5. ... [Etapa 5 - Criação das tabelas e normalização](#Etapa5)
 
-    Depois de processado a ordenação da tabela, se imprime a segunda linha (por causa do cabeçalho) que irá consistir na primeira data do registro de venda e o último registro de venda contendo a data do mesmo (novamente é utilizado o comando BEGIN para adicionar as vírgulas no output).
+    Primeiro é criado as tabelas de forma que separem elas por "objeto", exemplificando, a tabela cliente criada esteja relacionada a todos os dados relacionado ao cliente para que não tenha dependências parciais e transitivas, respeitando a 2FN e 3FN, respectivamente. E sempre criando as tabelas a partir dos IDs fornecidos que serão as chaves primárias (PK - Primary Key) para cada respectiva tabela e serão chaves estrangeiras (FK - Foreign Key) para a tabela principal que será o tb_locacao_atual, é importante ressaltar que a coluna dataLocacao da tabela principal estava do tipo DATETIME e para essa nova tabela foi utilizado o formato DATE para que se siga a normalização e os tipos que foram seguidos foram todos da tabela original. E a coluna kmCarro foi mantida na tabela principal por ser uma coluna que está ligada com o próprio idLocacao e os dados da locação e não somente ao objeto carro, esse campo é uma importante informação para verificar a km a cada locação.
 
-    ![Evidência](../Evidencias/ETAPA5_-_PRIMEIRO_E_ULTIMO_ITEM.png)
+    ![Evidência](../Evidencias/Desafio/ETAPA5_-_CRIACAO_TABELAS.png)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Etapa6"></a>
 
-6. ... [Etapa 6 - Total de itens e os 10 primeiros itens relatorio$DATA_ARQUIVO](#Etapa6)
+6. ... [Etapa 6 - Inserção dos dados nas novas tabelas](#Etapa6)
 
-    Agora é contabilizado o número de itens diferentes e pegar as primeiras 10 linhas do arquivo csv, para isso foi utilizado o comando cut para filtrar os duplicadas na coluna 2 que corresponde ao nome do item, exemplo: camiseta e é utilizado o pipeline para que um comando seguinte ter a saída do outro, sendo assim, o primeiro é "selecionado" pela 2 coluna e em seguinda é tirado com o tail o cabeçalho da tabela e depois disso, é utilizado o sort para conseguir tirar itens duplicados com o comando uniq e finalmente é utilizado o wc para somar todos os itens restantes.
+    Para a inserção dos dados foi utilizado o comando INSERT INTO em conjunto com o comando SELECT e DISTINCT que irá pegar os dados não duplicados, como por exemplo, os IDs que não podem ser repetidos para respeitar a 1FN e a unicidade da chave primária, em cada tabela que contém os "objetos", como carro, combustível, cliente, vendedor. E também foi utilizado o comando Order By para ordernar em relação ao ID. Para melhor visualização dos resultados das tabelas relacionais normalizadas, elas ficarão na parte de Anexo.
 
-    ![Evidência](../Evidencias/ETAPA6_-_TOTAL_E_OS_10_PRIMEIROS_ITENS.png)
+    - [tb_locacao_atual](#Anexo1)
+    - [tb_carro](#Anexo2)
+    - [tb_cliente](#Anexo3)
+    - [tb_vendedor](#Anexo4)
+    - [tb_combustivel](#Anexo5)
+
+    ![Evidência](../Evidencias/Desafio/ETAPA6_-_INSERCAO_DADOS.png)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -213,41 +220,51 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Anexo1"></a>
 
-1. ... [Anexo 1 - Código](#Anexo1)
+1. ... [Anexo 1 - Tabela Locacao Relacional](#Anexo1)
 
-    ![Evidência](../Evidencias/ANEXO1_-_CODIGO.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO1_-_TABELA_LOCACAO_RELACIONAL.png)
+
+[**Voltar a Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Anexo2"></a>
 
-2. ... [Anexo 2 - Código](#Anexo2)
+2. ... [Anexo 2 - Tabela Carro Relacional](#Anexo2)
 
-    ![Evidência](../Evidencias/ANEXO2_-_CODIGO.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO2_-_TABELA_CARRO_RELACIONAL.png)
+
+[**Voltar a Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Anexo3"></a>
 
-3. ... [Anexo 3 - Relatório feito no primeiro dia](#Anexo3)
+3. ... [Anexo 3 - Tabela Cliente Relacional](#Anexo3)
 
-    ![Evidência](../Evidencias/ANEXO3_-_PRIMEIRO_RELATORIO.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO3_-_TABELA_CLIENTE_RELACIONAL.png)
+
+[**Voltar a Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Anexo4"></a>
 
-4. ... [Anexo 4 - Comando history](#Anexo4)
+4. ... [Anexo 4 - Tabela Vendedor Relacional](#Anexo4)
 
-    ![Evidência](../Evidencias/ANEXO4_-_COMANDO_HISTORY.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO4_-_TABELA_VENDEDOR_RELACIONAL.png)
+
+[**Voltar a Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Anexo5"></a>
 
-5. ... [Anexo 5 - Primeiros outputs testes](#Anexo5)
+5. ... [Anexo 5 - Tabela Combustivel Relacional](#Anexo5)
 
-    ![Evidência](../Evidencias/ANEXO5_-_PRIMEIROS_OUTPUTS_TESTES.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO5_-_TABELA_COMBUSTIVEL_RELACIONAL.png)
+
+[**Voltar a Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
