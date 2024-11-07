@@ -21,8 +21,8 @@ SET dataEntrega = printf('%04d-%02d-%02d', SUBSTR(dataEntrega, 1, 4),
 									  	   SUBSTR(dataEntrega, 5, 2),
 									 	   SUBSTR(dataEntrega, 7, 2));
 
--- Transformacao da hora H:MM para HH:MM, o comando UPDATE atualiza as informações da tabela, o printf coloca no formato de HH:MM e o CAST é preciso nesse caso para transformar os número inteiros, porque se caso não use a data ira continuar como H:MM, o SUBSTR retorna o valor de uma string com o comeco e ate o tamanho especificado, que no primeiro caso é da primeira posicao ate chegar o ":" (com a utilizacao do comando INSTR que procura ate esse termo) -1 que indicaria as horas
-
+-- Transformacao da hora H:MM para HH:MM, o comando UPDATE atualiza as informacoes da tabela, o printf coloca no formato de HH:MM e o CAST é preciso nesse caso para transformar os numero inteiros, porque se caso não use ele irá continuar como H:MM, o SUBSTR retorna o valor de uma string com o comeco e ate o tamanho especificado, que no primeiro caso é da primeira posicao ate chegar o ":" (com a utilizacao do comando INSTR que procura ate esse termo) -1 que indicaria as horas
+-- e para os minutos foi feito o mesmo procedimento com a diferença da posição da função SUBSTR
 
 UPDATE tb_locacao_auxiliar
 SET horaLocacao = printf('%02d:%02d', CAST(SUBSTR(horaLocacao, 1, INSTR(horaLocacao, ':') - 1) AS INTEGER),
@@ -39,7 +39,7 @@ END;
 	
 -- Criacao de tabelas 
 
--- Tabela que contem as informacoes de locacao com o idlocacao como primary key (PK) e os outros IDs como chaves estrangeiras (FK)
+-- Tabela que contém as informacoes de locacao com o idlocacao como primary key (PK) e os outros IDs como chaves estrangeiras (FK), originalmente a dataLocacao estava com o tipo datetime e agora foi ajustado para o tipo date
 
 CREATE TABLE tb_locacao_atual (
 	idLocacao		int primary key,
@@ -156,6 +156,8 @@ ORDER BY idCarro;
 
 --SELECT * FROM tb_locacao_atual;
 
+--SELECT * FROM tb_locacao_auxiliar;
+
 --SELECT * FROM tb_cliente;
 
 --SELECT * FROM tb_vendedor;
@@ -167,6 +169,8 @@ ORDER BY idCarro;
 -- Comando para deletar alguma tabela desejada (tirar o comentario para deletar a tabela respectiva)
 
 --DROP TABLE tb_locacao_atual;
+
+--DROP TABLE tb_locacao_auxiliar;
 
 --DROP TABLE tb_cliente;
 
@@ -220,7 +224,7 @@ CREATE TABLE dim_carro (
 	tipoCombustivel varchar(20) 
 );
 
--- Insert nas tabelas fato e dimensão
+-- Insert nas tabelas fato e dimensao
 
 INSERT INTO fato_locacao (idLocacao, idCliente, idVendedor, idCarro, kmCarro, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega) 
 SELECT DISTINCT

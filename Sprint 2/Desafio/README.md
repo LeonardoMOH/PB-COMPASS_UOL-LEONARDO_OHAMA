@@ -72,17 +72,23 @@
 
     X.    [Anexo 10 - Tabela dim_vendedor](#Anexo10)
 
-    XI.   [Anexo 11 - Diagrama Entidade Relacionamento Modelo Dimensional](#Anexo11)    
+    XI.   [Anexo 11 - Diagrama Entidade Relacionamento Modelo Dimensional](#Anexo11)
+
+    XII.  [Anexo 12 - Versão do DBeaver](#Anexo12) 
+
+    XIII. [Anexo 13 - Versão do SQLite](#Anexo13)      
 
 ### README:
 
 1. [README Principal](../../README.md)
 
-2. [README Sprint 1](../README.md)
+2. [README Sprint 2](../README.md)
+
+<a id="Etapas"></a>
 
 # Etapas
 
-Explicação do desenvolvimento dos shells scripts e anexos contendo algumas informações adicionais.
+Explicação do desenvolvimento da normalização da tabela e criação do Modelo Relacional e Dimensional. Para o desenvolvimento foi utilizado o DBeaver Version 24.2.4.202411031831 (Release Date 04/11/2024) e SQLITE version 3.47.0. (Release Date 21/10/2024) para mais informações: [Anexo 12 - Versão do DBeaver](#Anexo12) e [Anexo 13 - Versão do SQLite](#Anexo13) 
 
 <a id="Etapa1"></a>
 
@@ -308,5 +314,27 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
     ![Evidência](../Evidencias/Desafio/ANEXO10_-_DIM_VENDEDOR.png) 
 
 [**Voltar a Etapa 8**](#Etapa8)   
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Anexo12"></a>
+
+12. ... [Anexo 12 - Versão do DBeaver](#Anexo12)
+
+    ![Evidência](../Evidencias/Desafio/ANEXO11_-_VERSAO_DO_DBEAVER_UTILIZADO.png) 
+
+[**Voltar a Etapas**](#Etapas)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Anexo13"></a>
+
+13. ... [Anexo 13 - Versão do SQLite](#Anexo13)
+
+    ![Evidência](../Evidencias/Desafio/ANEXO12_-_SQLITE.png)
+    
+    ![Evidência](../Evidencias/Desafio/ANEXO12_1_-_SQLITE.png)
+
+[**Voltar a Etapas**](#Etapas)
 
 [**Voltar ao Sumário**](#sumário)
