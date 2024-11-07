@@ -10,7 +10,7 @@
 
 4. [Diagrama Entidade Relacionamento Modelo Dimensional](<../Evidencias/Desafio/ANEXO11_-_DIAGRAMA_ER_MODELO_DIMENSIONAL.png>)
 
-[Observações](#Observacoes)
+
 
 1. [Etapas](#etapas)
 
@@ -186,7 +186,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO1_-_TABELA_LOCACAO_RELACIONAL.png)
 
-[**Voltar a Etapa 6**](#Etapa6)
+[**Voltar para Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -196,7 +196,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO2_-_TABELA_CARRO_RELACIONAL.png)
 
-[**Voltar a Etapa 6**](#Etapa6)
+[**Voltar para Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -206,7 +206,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO3_-_TABELA_CLIENTE_RELACIONAL.png)
 
-[**Voltar a Etapa 6**](#Etapa6)
+[**Voltar para Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -216,7 +216,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO4_-_TABELA_VENDEDOR_RELACIONAL.png)
 
-[**Voltar a Etapa 6**](#Etapa6)
+[**Voltar para Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -226,7 +226,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO5_-_TABELA_COMBUSTIVEL_RELACIONAL.png)
 
-[**Voltar a Etapa 6**](#Etapa6)
+[**Voltar para Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -236,7 +236,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO6_-_DIAGRAMA_ER.png)
 
-[**Voltar a Etapa 6**](#Etapa6)
+[**Voltar para Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -246,7 +246,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO7_-_FATO_LOCACAO.png)
 
-[**Voltar a Etapa 8**](#Etapa8)
+[**Voltar para Etapa 8**](#Etapa8)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -256,7 +256,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO8_-_DIM_CARRO.png)
 
-[**Voltar a Etapa 8**](#Etapa8)
+[**Voltar para Etapa 8**](#Etapa8)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -266,7 +266,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO9_-_DIM_CLIENTE.png)
 
-[**Voltar a Etapa 8**](#Etapa8)
+[**Voltar para Etapa 8**](#Etapa8)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -276,7 +276,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO10_-_DIM_VENDEDOR.png) 
 
-[**Voltar a Etapa 8**](#Etapa8)   
+[**Voltar para Etapa 8**](#Etapa8)   
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -286,7 +286,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO11_-_DIAGRAMA_ER_MODELO_DIMENSIONAL.png) 
 
-[**Voltar a Etapa 8**](#Etapa8)   
+[**Voltar para Etapa 8**](#Etapa8)   
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -296,7 +296,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
     ![Evidência](../Evidencias/Desafio/ANEXO12_-_VERSAO_DO_DBEAVER_UTILIZADO.png) 
 
-[**Voltar a Etapas**](#Etapas)
+[**Voltar para as Etapas**](#Etapas)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -304,10 +304,10 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
 13. ... [Anexo 13 - Versão do SQLite](#Anexo13)
 
-    ![Evidência](../Evidencias/Desafio/AANEXO13_-_SQLITE.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO13_-_SQLITE.png)
     
     ![Evidência](../Evidencias/Desafio/ANEXO13_1_-_SQLITE.png)
 
-[**Voltar a Etapas**](#Etapas)
+[**Voltar para as Etapas**](#Etapas)
 
 [**Voltar ao Sumário**](#sumário)
