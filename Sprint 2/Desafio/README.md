@@ -44,37 +44,35 @@
 
     VI.   [Etapa 6 - Inserção dos dados nas novas tabelas](#Etapa6)
 
-    VII.  [Etapa 7 - Finalização do relatorio$DATA_ARQUIVO](#Etapa7)
+    VII.  [Etapa 7 - Modelo Relacional para Dimensional](#Etapa7)
 
-    VIII. [Etapa 8 - crontab](#Etapa8)
+    VIII. [Etapa 8 - Inserção dos dados no Modelo Dimensional](#Etapa8)
 
-    IX.   [Etapa 9 - crontab configuração](#Etapa9)
-
-    X.    [Etapa 10 - Segundo script](#Etapa10)
-
-    XI.   [Observações](#Observacoes)
+    IX.   [Observações](#Observacoes)
 
 2. [Anexos](#anexos)
 
-    I.    [Anexo 1 - Tabela Locacao Relacional](#Anexo1)
+    I.    [Anexo 1 - Tabela tb_locacao_atual](#Anexo1)
 
-    II.   [Anexo 2 - Tabela Carro Relacional](#Anexo2)
+    II.   [Anexo 2 - Tabela tb_carro](#Anexo2)
 
-    III.  [Anexo 3 - Tabela Cliente Relacional](#Anexo3)
+    III.  [Anexo 3 - Tabela tb_cliente](#Anexo3)
 
-    IV.   [Anexo 4 - Tabela Vendedor Relacional](#Anexo4)
+    IV.   [Anexo 4 - Tabela tb_vendedor](#Anexo4)
 
-    V.    [Anexo 5 - Tabela Combustivel Relacional](#Anexo5)
+    V.    [Anexo 5 - Tabela tb_combustivel](#Anexo5)
 
-    VI.   [Anexo 6 - Primeiros outputs testes 2](#Anexo6)
+    VI.   [Anexo 6 - Diagrama Entidade Relacionamento Modelo Relacional](#Anexo6)
 
-    VII.  [Anexo 7 - Primeiros outputs testes 3](#Anexo7)
+    VII.  [Anexo 7 - Tabela fato_locacao](#Anexo7)
 
-    VIII. [Anexo 8 - Configurações da VM](#Anexo8)
+    VIII. [Anexo 8 - Tabela dim_carro](#Anexo8)
 
-    IX.   [Anexo 9 - Local do crontab](#Anexo9)
+    IX.   [Anexo 9 - Tabela dim_cliente](#Anexo9)
 
-    X.    [Anexo 10 - Relatório gerado com CSV bugado do dia 23/10/2024](#Anexo10)    
+    X.    [Anexo 10 - Tabela dim_vendedor](#Anexo10)
+
+    XI.   [Anexo 11 - Diagrama Entidade Relacionamento Modelo Dimensional](#Anexo11)    
 
 ### README:
 
@@ -131,7 +129,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 5. ... [Etapa 5 - Criação das tabelas e normalização](#Etapa5)
 
-    Primeiro é criado as tabelas de forma que separem elas por "objeto", exemplificando, a tabela cliente criada esteja relacionada a todos os dados relacionado ao cliente para que não tenha dependências parciais e transitivas, respeitando a 2FN e 3FN, respectivamente. E sempre criando as tabelas a partir dos IDs fornecidos que serão as chaves primárias (PK - Primary Key) para cada respectiva tabela e serão chaves estrangeiras (FK - Foreign Key) para a tabela principal que será o tb_locacao_atual, é importante ressaltar que a coluna dataLocacao da tabela principal estava do tipo DATETIME e para essa nova tabela foi utilizado o formato DATE para que se siga a normalização e os tipos que foram seguidos foram todos da tabela original. E a coluna kmCarro foi mantida na tabela principal por ser uma coluna que está ligada com o próprio idLocacao e os dados da locação e não somente ao objeto carro, esse campo é uma importante informação para verificar a km a cada locação.
+    Primeiro é criado as tabelas de forma que separem elas por "objeto" (locacao_atual, carro, combustivel, cliente, vendedor), exemplificando, a tabela cliente criada esteja relacionada a todos os dados relacionado ao cliente para que não tenha dependências parciais e transitivas, respeitando a 2FN e 3FN, respectivamente. E sempre criando as tabelas a partir dos IDs fornecidos que serão as chaves primárias (PK - Primary Key) para cada respectiva tabela e serão chaves estrangeiras (FK - Foreign Key) para a tabela principal que será o tb_locacao_atual, é importante ressaltar que a coluna dataLocacao da tabela principal estava do tipo DATETIME e para essa nova tabela foi utilizado o formato DATE para que se siga a normalização e os tipos que foram seguidos foram todos da tabela original. E a coluna kmCarro foi mantida na tabela principal por ser uma coluna que está ligada com o próprio idLocacao e os dados da locação e não somente ao objeto carro, esse campo é uma importante informação para verificar a km a cada locação.
 
     ![Evidência](../Evidencias/Desafio/ETAPA5_-_CRIACAO_TABELAS.png)
 
@@ -148,6 +146,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
     - [tb_cliente](#Anexo3)
     - [tb_vendedor](#Anexo4)
     - [tb_combustivel](#Anexo5)
+    - [Diagrama Entidade Relacionamento Modelo Relacional](#Anexo6)
 
     ![Evidência](../Evidencias/Desafio/ETAPA6_-_INSERCAO_DADOS.png)
 
@@ -155,49 +154,33 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Etapa7"></a>
 
-7. ... [Etapa 7 - Finalização do relatorio$DATA_ARQUIVO](#Etapa7)
+7. ... [Etapa 7 - Modelo Relacional para Dimensional](#Etapa7)
 
-    É deletado o arquivo auxiliar que foi utilizado para ordenação dos itens e o relatório movido para o diretório backup, logo após é movido o diretório de execução do script para compactar o arquivo backup-dados-$DATA_ARQUIVO.csv e em seguida é removido o arquivo csv, deixando apenas o arquivo compactado e para finalizar é deletado o arquivo dados_de_vendas.csv.
+    No modelo dimensional foi decidido que também vai ser feito criação de tabelas para que seja visualizado o diagrama entidade relacionamento. Agora é separado as tabelas na tabela fato e as dimensões que são: carro, cliente, vendedor. Nas tabelas dimensões são mantidas as informações relacionadas a cada respectiva tabela dimensão. Como foi feito anteriormente, as tabelas são criadas pelo comando CREATE TABLE. Vale mencionar que durante a criação dessas tabelas foi mudado o nome da coluna para uma melhor visualização de cada tabela.
     
-    ![Evidência](../Evidencias/ETAPA7_-_FINALIZACAO_DO_RELATORIO.png)
+    ![Evidência](../Evidencias/Desafio/ETAPA7_-_CRIACAO_TABELAS_DIM.png)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Etapa8"></a>
 
-8. ... [Etapa 8 - crontab](#Etapa8)
+8. ... [Etapa 8 - Inserção dos dados no Modelo Dimensional](#Etapa8)
 
-    O crontab é um comando para agendar execuções no linux para isso é utilizado o crontab -e no terminal para editar o agendamento para executar o shell script.
+    Agora para a inserção de dados como foi feito anteriormente, com o comando SELECT e DISTINCT, o último caso houvesse alguma inconsistência dos dados e finalizado com um ORDER BY pelos IDs e utilizando as tabelas feitas pelo modelo relacional. Foi utilizado um JOIN com a finalidade de obter o tipo de combustível que foi diferente da tabela do modelo relacional (estava em uma tabela combustivel) que agora está junta com a tabela carro. Como feito anteriormente, as tabelas dimensão e fato estarão na parte de anexo.
 
-    ![Evidência](../Evidencias/ETAPA8_-_CRONTAB.png)
+    - [fato_locacao](#Anexo7)
+    - [dim_carro](#Anexo8)
+    - [dim_cliente](#Anexo9)
+    - [dim_vendedor](#Anexo10)
+    - [Diagrama Entidade Relacionamento Modelo Dimensional](#Anexo11)
 
-[**Voltar ao Sumário**](#sumário)
-
-<a id="Etapa9"></a>
-
-9. ... [Etapa 9 - crontab configuração](#Etapa9)
-
-    Para a sua configuração é colocado para o crontab executar o processamento_de_vendas.sh às 15h27 nos dias quinta-feira a domingo, vale ressaltar que no comando é mudado o diretório de execução para a pasta raiz da Sprint1, porque se caso não se faça isso o shell script vai tentar executar no diretório home.
-
-    ![Evidência](../Evidencias/ETAPA9_-_CRONTAB.png)
-
-[**Voltar ao Sumário**](#sumário)
-
-<a id="Etapa10"></a>
-
-10. ... [Etapa 10 - Segundo script](#Etapa10)
-
-    Após executado em quatro dias consecutivos o script, agora é gerado um relatório final com a junção dos quatro relatórios.
-
-    ![Evidência](../Evidencias/ETAPA10_-_SEGUNDO_SCRIPT.png)
-
-    ![Evidêcia](../Evidencias/ETAPA11_-_RELATORIO_FINAL.png)
+    ![Evidência](../Evidencias/Desafio/ETAPA8_-_INSERCAO_DADOS_DIM.png)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Observacoes"></a>
 
-11. ... [Observações](#Observacoes)
+9. ... [Observações](#Observacoes)
 
     I. O relatório do dia 22/10/2024 teve um pequeno erro no começo da data que está no formato DD/MM/YYYY que não é o pedido pelo desafio, portanto, o problema foi arrumado no dia 24/10 e foi feito um novo relatório no dia 27/10 com a correção. O desafio pedia que o formato da data inicial fosse YYYY/MM/AA.
 
@@ -220,7 +203,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Anexo1"></a>
 
-1. ... [Anexo 1 - Tabela Locacao Relacional](#Anexo1)
+1. ... [Anexo 1 - Tabela tb_locacao_atual](#Anexo1)
 
     ![Evidência](../Evidencias/Desafio/ANEXO1_-_TABELA_LOCACAO_RELACIONAL.png)
 
@@ -230,7 +213,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Anexo2"></a>
 
-2. ... [Anexo 2 - Tabela Carro Relacional](#Anexo2)
+2. ... [Anexo 2 - Tabela tb_carro](#Anexo2)
 
     ![Evidência](../Evidencias/Desafio/ANEXO2_-_TABELA_CARRO_RELACIONAL.png)
 
@@ -240,7 +223,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Anexo3"></a>
 
-3. ... [Anexo 3 - Tabela Cliente Relacional](#Anexo3)
+3. ... [Anexo 3 - Tabela tb_cliente](#Anexo3)
 
     ![Evidência](../Evidencias/Desafio/ANEXO3_-_TABELA_CLIENTE_RELACIONAL.png)
 
@@ -250,7 +233,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Anexo4"></a>
 
-4. ... [Anexo 4 - Tabela Vendedor Relacional](#Anexo4)
+4. ... [Anexo 4 - Tabela tb_vendedor](#Anexo4)
 
     ![Evidência](../Evidencias/Desafio/ANEXO4_-_TABELA_VENDEDOR_RELACIONAL.png)
 
@@ -260,7 +243,7 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Anexo5"></a>
 
-5. ... [Anexo 5 - Tabela Combustivel Relacional](#Anexo5)
+5. ... [Anexo 5 - Tabela tb_combustivel](#Anexo5)
 
     ![Evidência](../Evidencias/Desafio/ANEXO5_-_TABELA_COMBUSTIVEL_RELACIONAL.png)
 
@@ -270,40 +253,60 @@ Explicação do desenvolvimento dos shells scripts e anexos contendo algumas inf
 
 <a id="Anexo6"></a>
 
-6. ... [Anexo 6 - Primeiros outputs testes 2](#Anexo6)
+6. ... [Anexo 6 - Diagrama Entidade Relacionamento Modelo Relacional](#Anexo6)
 
-    ![Evidência](../Evidencias/ANEXO6_-_PRIMEIROS_OUTPUTS_TESTES_2.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO6_-_DIAGRAMA_ER.png)
+
+[**Voltar a Etapa 6**](#Etapa6)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Anexo7"></a>
 
-7. ... [Anexo 7 - Primeiros outputs testes 3](#Anexo7)
+7. ... [Anexo 7 - Tabela fato_locacao](#Anexo7)
 
-    ![Evidência](../Evidencias/ANEXO7_-_PRIMEIROS_OUTPUTS_TESTES_3.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO7_-_FATO_LOCACAO.png)
+
+[**Voltar a Etapa 8**](#Etapa8)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Anexo8"></a>
 
-8. ... [Anexo 8 - Configurações da VM](#Anexo8)
+8. ... [Anexo 8 - Tabela dim_carro](#Anexo8)
 
-    ![Evidência](../Evidencias/ANEXO8_-_CONFIGURACOES_DA_VM.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO8_-_DIM_CARRO.png)
+
+[**Voltar a Etapa 8**](#Etapa8)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Anexo9"></a>
 
-9. ... [Anexo 9 - Local do crontab](#Anexo9)
+9. ... [Anexo 9 - Tabela dim_cliente](#Anexo9)
 
-    ![Evidência](../Evidencias/ANEXO9_-_CRONTAB_LOCAL.png)
+    ![Evidência](../Evidencias/Desafio/ANEXO9_-_DIM_CLIENTE.png)
+
+[**Voltar a Etapa 8**](#Etapa8)
 
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Anexo10"></a>
 
-10. ... [Anexo 10 - Relatório gerado com CSV bugado do dia 23/10/2024](#Anexo10)
+10. ... [Anexo 10 - Tabela dim_vendedor](#Anexo10)
 
-    ![Evidência](../Evidencias/ANEXO10_-_RELATORIO_GERADO_COM_CSV_BUGADO.png)    
+    ![Evidência](../Evidencias/Desafio/ANEXO10_-_DIM_VENDEDOR.png) 
+
+[**Voltar a Etapa 8**](#Etapa8)   
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Anexo11"></a>
+
+11. ... [Anexo 11 - Diagrama Entidade Relacionamento Modelo Dimensional](#Anexo10)
+
+    ![Evidência](../Evidencias/Desafio/ANEXO10_-_DIM_VENDEDOR.png) 
+
+[**Voltar a Etapa 8**](#Etapa8)   
 
 [**Voltar ao Sumário**](#sumário)

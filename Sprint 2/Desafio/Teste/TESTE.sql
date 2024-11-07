@@ -43,6 +43,9 @@ END;
 
 CREATE TABLE tb_locacao_atual (
 	idLocacao		int primary key,
+	idCliente 		int,
+	idVendedor      int,
+	idCarro  		int,
 	kmCarro         int,
 	dataLocacao     date,
  	horaLocacao     time,
@@ -50,9 +53,6 @@ CREATE TABLE tb_locacao_atual (
 	vlrDiaria       decimal(18,2),
  	dataEntrega     date,
 	horaEntrega     time,
-	idCliente 		int,
-	idVendedor      int,
-	idCarro  		int,
 	FOREIGN KEY (idCliente) REFERENCES tb_cliente(idCliente),
 	FOREIGN KEY (idVendedor) REFERENCES tb_vendedor(idVendedor),
 	FOREIGN KEY (idCarro) REFERENCES tb_carro(idCarro)
@@ -99,20 +99,20 @@ CREATE TABLE tb_carro (
 									  
 -- Inserindo os dados da tabela antiga nas novas criadas
 
-INSERT INTO tb_locacao_atual (idLocacao, kmCarro, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega, idCliente, idVendedor, idCarro) 
+INSERT INTO tb_locacao_atual (idLocacao, idCliente, idVendedor, idCarro, kmCarro, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega) 
 SELECT DISTINCT
 	idLocacao,
+	idCliente,
+	idVendedor,
+	idCarro,
 	kmCarro,
 	dataLocacao,
 	horaLocacao,
 	qtdDiaria,
 	vlrDiaria,
 	dataEntrega,
-	horaEntrega,
-	idCliente,
-	idVendedor,
-	idCarro
-FROM tb_locacao
+	horaEntrega
+FROM tb_locacao_auxiliar
 ORDER BY idLocacao;
 
 INSERT INTO tb_cliente (idCliente, nomeCliente, cidadeCliente, estadoCliente, paisCliente) 
@@ -122,7 +122,7 @@ SELECT DISTINCT
 	cidadeCliente,
 	estadoCliente,
 	paisCliente
-FROM tb_locacao
+FROM tb_locacao_auxiliar
 ORDER BY idCliente;
 
 INSERT INTO tb_vendedor (idVendedor, nomeVendedor, sexoVendedor, estadoVendedor) 
@@ -131,14 +131,14 @@ SELECT DISTINCT
 	nomeVendedor,
 	sexoVendedor,
 	estadoVendedor
-FROM tb_locacao
+FROM tb_locacao_auxiliar
 ORDER BY idVendedor;
 
 INSERT INTO tb_combustivel (idcombustivel, tipoCombustivel) 
 SELECT DISTINCT
 	idcombustivel,
 	tipoCombustivel
-FROM tb_locacao
+FROM tb_locacao_auxiliar
 ORDER BY idcombustivel;
 
 INSERT INTO tb_carro (idCarro, classiCarro, marcaCarro, modeloCarro, anoCarro, idcombustivel) 
@@ -149,8 +149,8 @@ SELECT DISTINCT
 	modeloCarro,
 	anoCarro,
 	idcombustivel
-FROM tb_locacao
-ORDER BY idCarro;
+FROM tb_locacao_auxiliar
+ORDER BY idCarro;	
 
 -- Verificacao se as tabelas tiveram os seus valores inseridos (tirar o comentario para executar o SELECT)
 
@@ -179,8 +179,6 @@ DROP TABLE tb_vendedor;
 DROP TABLE tb_combustivel;
 
 DROP TABLE tb_carro;
-
-DROP TABLE tb_marca;
 
 -- Criacao do modelo dimensional por meio de Views a partir das tabelas relacionais
 
@@ -231,6 +229,9 @@ FROM tb_vendedor;
 
 CREATE TABLE fato_locacao (
 	idLocacao		int primary key,
+	idCliente 		int,
+	idVendedor      int,
+	idCarro  		int,
 	kmCarro         int,
 	dataLocacao     date,
  	horaLocacao     time,
@@ -238,12 +239,9 @@ CREATE TABLE fato_locacao (
 	vlrDiaria       decimal(18,2),
  	dataEntrega     date,
 	horaEntrega     time,
-	idCliente 		int,
-	idVendedor      int,
-	idCarro  		int,
-	FOREIGN KEY (idCliente) REFERENCES tb_cliente(idCliente),
-	FOREIGN KEY (idVendedor) REFERENCES tb_vendedor(idVendedor),
-	FOREIGN KEY (idCarro) REFERENCES tb_carro(idCarro)
+	FOREIGN KEY (idCliente) REFERENCES dim_cliente(id),
+	FOREIGN KEY (idVendedor) REFERENCES dim_vendedor(id),
+	FOREIGN KEY (idCarro) REFERENCES dim_carro(id)
 );
 
 CREATE TABLE dim_cliente (
@@ -270,3 +268,53 @@ CREATE TABLE dim_carro (
 	idcombustivel   int,
 	tipoCombustivel varchar(20) 
 );
+
+-- Insert nas tabelas fato e dimensão
+
+INSERT INTO fato_locacao (idLocacao, idCliente, idVendedor, idCarro, kmCarro, dataLocacao, horaLocacao, qtdDiaria, vlrDiaria, dataEntrega, horaEntrega) 
+SELECT DISTINCT
+	idLocacao,
+	idCliente,
+	idVendedor,
+	idCarro,
+	kmCarro,
+	dataLocacao,
+	horaLocacao,
+	qtdDiaria,
+	vlrDiaria,
+	dataEntrega,
+	horaEntrega
+FROM tb_locacao_atual
+ORDER BY idLocacao;
+
+INSERT INTO dim_cliente (id, nome, cidade, estado, pais) 
+SELECT DISTINCT
+	idCliente,
+	nomeCliente,
+	cidadeCliente,
+	estadoCliente,
+	paisCliente
+FROM tb_cliente
+ORDER BY idCliente;
+
+INSERT INTO dim_vendedor (id, nome, sexo, estado) 
+SELECT DISTINCT
+	idVendedor,
+	nomeVendedor,
+	sexoVendedor,
+	estadoVendedor
+FROM tb_vendedor
+ORDER BY idVendedor;
+
+INSERT INTO dim_carro (id, classi, marca, modelo, ano, idcombustivel, tipoCombustivel) 
+SELECT DISTINCT
+	idCarro,
+	classiCarro,
+	marcaCarro,
+	modeloCarro,
+	anoCarro,
+	tb_carro.idcombustivel,
+	tipoCombustivel
+FROM tb_carro
+JOIN tb_combustivel ON tb_carro.idcombustivel = tb_combustivel.idcombustivel
+ORDER BY idCarro;
