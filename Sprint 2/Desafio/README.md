@@ -96,7 +96,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
 3. ... [Etapa 3 - Criação de uma tabela auxiliar e o primeiro tratamento de dados](#Etapa3)
 
-    Primeiro é importante ressaltar que no SQLITE é difícil de utilizar o comando ALTER TABLE para alterar a tabela, por isso foi decidido que é necessário criar tabelas novas (poderiam ser criadas views também). Para isso foi criado uma tabela auxiliar e a cópia da original para que caso haja perda de dados ou alterações errôneas esses dados da tabela sejam mantidos, pois assim irá ser utilizado o comando UPDATE que consequentemente vai fazer a alteração dos valores da tabela original e logo após isso executamos o comando UPDATE com o auxílio da função printf que coloca o "formato" de saída desejado que é YYYY-MM-DD e juntamente com a função SUBSTR que retorna uma string a partir da posição dada e o tamanho dela.
+    Primeiro é importante ressaltar que no SQLITE é difícil de utilizar o comando ALTER TABLE para alterar a tabela, por isso foi decidido que é necessário criar tabelas novas (poderiam ser criadas views também). Portanto, foi criado uma tabela auxiliar e a cópia da original para que caso haja perda de dados ou alterações errôneas esses dados da tabela sejam mantidos, pois assim irá ser utilizado o comando UPDATE que consequentemente vai fazer a alteração dos valores da tabela original. Assim, executamos o comando UPDATE com o auxílio da função printf que coloca o "formato" de saída desejado que é YYYY-MM-DD e juntamente com a função SUBSTR que retorna uma string a partir da posição dada e o tamanho dela.
 
     ![Evidência](../Evidencias/Desafio/ETAPA3_-_TABELA_TRATAMENTO_DATA.png)
 
@@ -175,6 +175,8 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
     II. Nas prints foi utilizado um arquivo de script de SQL chamado TESTE.SQL, porém ele corresponde ao que se encontra no README.
 
     III. Há alguns comandos em formato de comentário no script do SQL para caso haja uma necessidade de verificar o conteúdo das tabelas ou a exclusão delas.
+
+    IV. A coluna kmCarro para uma melhor visualização de quanto o km do carro atual, poderia ser criado uma nova tabela que da um SELECT no idCarro e a kmCarro máxima com a função MAX e assim criar uma coluna nova na tabela do carro chamada kmCarro_atual assim manteria o kmCarro de cada aluguel e sempre pegando o máximo valor dessa tabela principal (utilizando JOINs).
 
 [**Voltar ao Sumário**](#sumário)
 
