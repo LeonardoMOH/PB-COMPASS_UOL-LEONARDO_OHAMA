@@ -144,7 +144,7 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
 
 7. ... [Etapa 7 - Modelo Relacional para Dimensional](#Etapa7)
 
-    No modelo dimensional foi decidido que também, vai ser feito criação de novas tabelas para que seja visualizado o diagrama entidade relacionamento. Agora é separado as tabelas na tabela fato que é a locação e as dimensões que são: carro, cliente, vendedor. Nas tabelas dimensões são mantidas as informações relacionadas a cada respectiva tabela dimensão. Como foi feito anteriormente, as tabelas são criadas pelo comando CREATE TABLE. Vale mencionar que durante a criação dessas tabelas foi mudado o nome da coluna para uma melhor visualização de cada tabela.
+    No modelo dimensional foi decidido que também, vai ser feito criação de novas tabelas. Agora é separado as tabelas na tabela fato que é a locação e as dimensões que são: carro, cliente, vendedor. Nas tabelas dimensões são mantidas as informações relacionadas a cada respectiva tabela dimensão. Como foi feito anteriormente, as tabelas são criadas pelo comando CREATE TABLE. Vale mencionar que durante a criação dessas tabelas foi mudado o nome da coluna para uma melhor visualização de cada tabela.
     
     ![Evidência](../Evidencias/Desafio/ETAPA7_-_CRIACAO_TABELAS_DIM.png)
 
@@ -177,6 +177,10 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
     III. Há alguns comandos em formato de comentário no script do SQL para caso haja uma necessidade de verificar o conteúdo das tabelas ou a exclusão delas.
 
     IV. A coluna kmCarro para uma melhor visualização de quanto o km do carro atual, poderia ser criado uma nova tabela que da um SELECT no idCarro e a kmCarro máxima com a função MAX e assim criar uma coluna nova na tabela do carro chamada kmCarro_atual assim manteria o kmCarro de cada aluguel e sempre pegando o máximo valor dessa tabela principal (utilizando JOINs).
+
+    V. Para a criação do Modelo Dimensional poderia ter sido utilizado a criação de VIEWs a única observação é que com as VIEWs seria necessário a criação de JOINs para representar o Diagrama Entidade Relacionamento no software DBeaver.
+
+    VI. Há um erro no dado da dataLocacao no idLocacao de número 16, a dataLocacao está numa data posterior a dataEntrega. [Anexo 14](#Anexo14)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -311,5 +315,15 @@ Explicação do desenvolvimento da normalização da tabela e criação do Model
     ![Evidência](../Evidencias/Desafio/ANEXO13_1_-_SQLITE.png)
 
 [**Voltar para as Etapas**](#Etapas)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Anexo14"></a>
+
+14. ... [ANEXO14_-_DATALOCACAO](#Anexo14)
+
+    ![Evidência](../Evidencias/Desafio/ANEXO14_-_DATALOCACAO.png)
+    
+[**Voltar para as Observações**](#Observacoes)
 
 [**Voltar ao Sumário**](#sumário)
