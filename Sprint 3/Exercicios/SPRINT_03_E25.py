@@ -1,4 +1,5 @@
 class Aviao:
+    cor = 'azul'
     
     def __init__(self, modelo, velocidade_maxima, cor, capacidade):
         self.modelo = modelo

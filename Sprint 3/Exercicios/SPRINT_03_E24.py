@@ -1,22 +1,21 @@
 class Ordenadora:
     
-    def __init__(self):
-        self.listaBaguncada = []
+    
+    def __init__(self, lista):
+        self.listaBaguncada = lista
 
     
-    def ordenacaoCrescente(self, lista):
-        self.listaBaguncada = lista
+    def ordenacaoCrescente(self):
         self.listaBaguncada.sort()
         return self.listaBaguncada
     
 
-    def ordenacaoDecrescente(self, lista):
-        self.listaBaguncada = lista
+    def ordenacaoDecrescente(self):
         self.listaBaguncada.sort(reverse = True)
         return self.listaBaguncada
 
 
-listaBaguncada = Ordenadora()
-print(listaBaguncada.ordenacaoCrescente([3,4,2,1,5]))
-
-print(listaBaguncada.ordenacaoDecrescente([9,7,6,8]))
+crescente = Ordenadora([3,4,2,1,5])
+print(crescente.ordenacaoCrescente())
+decrescente = Ordenadora([9,7,6,8])
+print(decrescente.ordenacaoDecrescente())
