@@ -448,7 +448,9 @@ Obs.: Lembrem-se, para calcular a mediana a lista deve estar ordenada!
 
 
 import random 
-# amostra aleatoriamente 50 números do intervalo 0...500
+
+amostra aleatoriamente 50 números do intervalo 0...500
+
 random_list = random.sample(range(500),50)
 
 
@@ -669,7 +671,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 01
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E01.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E01.png>)
 
 [**Voltar ao Exercício 01**](#Exercício01)
 
@@ -679,7 +681,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 02
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E02.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E02.png>)
 
 [**Voltar ao Exercício 02**](#Exercício02)
 
@@ -689,7 +691,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 03
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E03.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E03.png>)
 
 [**Voltar ao Exercício 03**](#Exercício03)
 
@@ -699,7 +701,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 04
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E04.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E04.png>)
 
 [**Voltar ao Exercício 04**](#Exercício04)
 
@@ -709,7 +711,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 05
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E05.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E05.png>)
 
 [**Voltar ao Exercício 05**](#Exercício05)
 
@@ -719,7 +721,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 06
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E06.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E06.png>)
 
 [**Voltar ao Exercício 06**](#Exercício06)
 
@@ -729,7 +731,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 07
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E07.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E07.png>)
 
 [**Voltar ao Exercício 07**](#Exercício07)
 
@@ -739,7 +741,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 08
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E08.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E08.png>)
 
 [**Voltar ao Exercício 08**](#Exercício08)
 
@@ -749,7 +751,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 09
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E09.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E09.png>)
 
 [**Voltar ao Exercício 09**](#Exercício09)
 
@@ -759,7 +761,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 10
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E10.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E10.png>)
 
 [**Voltar ao Exercício 10**](#Exercício10)
 
@@ -769,7 +771,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 11
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E11.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E11.png>)
 
 [**Voltar ao Exercício 11**](#Exercício11)
 
@@ -779,7 +781,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 12
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E12.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E12.png>)
 
 [**Voltar ao Exercício 12**](#Exercício12)
 
@@ -789,7 +791,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 13
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E13.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E13.png>)
 
 [**Voltar ao Exercício 13**](#Exercício13)
 
@@ -799,7 +801,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 14
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E14.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E14.png>)
 
 [**Voltar ao Exercício 14**](#Exercício14)
 
@@ -809,7 +811,7 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 15
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E15.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E15.png>)
 
 [**Voltar ao Exercício 15**](#Exercício15)
 
@@ -819,11 +821,104 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 ### Exercício 16
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E16.png>)
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E16.png>)
 
 [**Voltar ao Exercício 16**](#Exercício16)
 
 [**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício17_1"></a>
+
+### Exercício 17
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E17.png>)
+
+[**Voltar ao Exercício 17**](#Exercício17)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício18_1"></a>
+
+### Exercício 18
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E18.png>)
+
+[**Voltar ao Exercício 18**](#Exercício18)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício19_1"></a>
+
+### Exercício 19
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E19.png>)
+
+[**Voltar ao Exercício 19**](#Exercício19)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício20_1"></a>
+
+### Exercício 20
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E20.png>)
+
+[**Voltar ao Exercício 20**](#Exercício20)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício21_1"></a>
+
+### Exercício 21
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E21_1.png>)
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E21_2.png>)
+
+[**Voltar ao Exercício 21**](#Exercício21)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício22_1"></a>
+
+### Exercício 22
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E22.png>)
+
+[**Voltar ao Exercício 22**](#Exercício22)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício23_1"></a>
+
+### Exercício 23
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E23.png>)
+
+[**Voltar ao Exercício 23**](#Exercício23)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício24_1"></a>
+
+### Exercício 24
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E24.png>)
+
+[**Voltar ao Exercício 24**](#Exercício24)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Exercício25_1"></a>
+
+### Exercício 25
+
+![Resultado](<Evidencias/Exercicios/SPRINT_03_E25.png>)
+
+[**Voltar ao Exercício 25**](#Exercício25)
+
+[**Voltar ao Sumário**](#sumário)
+
 
 <a id="Exercício_exp_1_1"></a>
 
@@ -847,8 +942,8 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 # Certificados
 
-[AWS Partner: Sales Accreditation (Business) (Portuguese) PDF](<Certificados/AWS Partner Sales Accreditation (Business) (Portuguese).pdf>)
+[AWS Partner Cloud Economics (Portuguese)](<Certificados/AWS Partner Cloud Economics (Portuguese).pdf>)
 
-![AWS Partner: Sales Accreditation (Business) (Portuguese)](<Certificados/AWS Partner Sales Accreditation (Business) (Portuguese).png>)
+![AWS Partner Cloud Economics (Portuguese)](<Certificados/AWS Partner Cloud Economics (Portuguese).png>)
 
 [**Voltar ao Sumário**](#sumário)
