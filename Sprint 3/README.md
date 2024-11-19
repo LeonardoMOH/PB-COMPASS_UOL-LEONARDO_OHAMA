@@ -56,9 +56,17 @@
 
     XXV.  [Exercício 25](#Exercício25)
 
-    XXVI. [Exercício Exportação 1](#Exercício_exp_1)
+    XXVI. [Exercício ETL](#Exercício_ETL)
 
-    XXVII.[Exercício Exportação 2](#Exercício_exp_2)
+    A. [Exercício ETL - Etapa 1](#Etapa1)
+
+    B. [Exercício ETL - Etapa 2](#Etapa2)
+
+    C. [Exercício ETL - Etapa 3](#Etapa3)
+
+    D. [Exercício ETL - Etapa 4](#Etapa4)
+
+    E. [Exercício ETL - Etapa 5](#Etapa5)
 
 3. [Evidências](#evidências)
 
@@ -629,31 +637,106 @@ modelo Antonov An-2: velocidade máxima de 258 Km/h: capacidade para 12 passagei
 
 [**Voltar ao Sumário**](#sumário)
 
-<a id="Exercício_exp_1"></a>
+<a id="Exercício_ETL"></a>
 
-### Exercício Exportação 1
+### Exercício ETL
 
-Exportar o resultado da query que obtém os 10 livros mais caros para um arquivo CSV. Utiizar o caractere ; (ponto e vírgula) como separador. Lembre-se que o conteúdo do seu arquivo deverá respoeitar a sequência de colunas e seus respectivos nomes de cabeçalho que listamos abaixo: CodLivro, Titulo, CodAutor, NomeAutor, Valor, CodEditora, NomeEditora. Observação: O arquivo exportado, conforme as especificações acima, deve ser disponibilizado no GitHub.
+Neste desafio você irá aplicar alguns fundamentos de ETL (Extract-Transform-Load) utilizando como recurso a linguagem Python, entrada será o arquivo actors.csv.
 
-[Solução SQL Exercício Exportação 1](Exercicios/SPRINT_02_E02_02.sql)
+Armazene arquivo actors.csv (disponivel para downicad ro recurso) em um diretório local de seu
+computador. Após, crie 5 novos arquivos com extensão .txt, todos vazios. Você pode nomeá-los de etapa-1.txt, etapa-2.txt, ..., etapa-5.txt
 
-[Solução CSV Exercício Exportação 1](Exercicios/SPRINT_02_E02_02.csv)
+A sequência de perguntas irá orientar a processamento a ser feito sobre o conteúdo do arquivo actors.csv. As respostas obtidas en cada etapa devem ser armazenadas no respectivo arquivo de texto.
 
-[Resultado Exercício Exportação 1](#Exercício_exp_1_1)
+**Importante:** 
+
+Para desenvolvimento deste exercício **não** utilize bibliotecas como Pandas, Polars, NumPy, CSV e/ou outras bibliotecas e engines que abstraem o processamento de dados.
+
+Todas as transformações que julgarem necessérias devem ser feitas por meio dos scripts Python. Nenhuma modificação deve ser feita no arquivo actors.csv.
+
+Para leitura do arquivo actors.csv, **não** utilize a módulo csv nativo do Python. 
+
+**Dicionário de Dados**
+
+Abaixo segue a definicão das colunas contidas no arquivo actors.csv 
+
+**Actor:** Nome do ator. **Total Gross:** Receita bruta de biheteria doméstica, em milhões de dólares, de todos os filmes do ator. **Number of movies:** Número de filmes em que o ator participou. **Average per Movie:** Corresponde à bilheteria bruta dividida pelo número de filmes. **#1 Movie:** Filme de maior receita bruta em que o ator participou. **Gross:** Receita bruta de bilheteria doméstica, em milhões de dólares, do filme de maior receita.
+
+[actors.csv](Exercicios/ETL/actors.csv)
+
+[Script Python](Exercicios/ETL/ETL.py)
+
+[Etapa 1](Exercicios/ETL/etapa-1.txt)
+
+[Etapa 2](Exercicios/ETL/etapa-2.txt)
+
+[Etapa 3](Exercicios/ETL/etapa-3.txt)
+
+[Etapa 4](Exercicios/ETL/etapa-4.txt)
+
+[Etapa 5](Exercicios/ETL/etapa-5.txt)
+
+<a id="Etapa1"></a>
+
+## Etapa 1
+
+Apresente o **ator/atriz** com maior número de filmes e a respectiva quantidade. A quantidade de filmes encontra-se na coluna **Number of movies** do arquivo
+
+[Etapa 1](Exercicios/ETL/etapa-1.txt)
+
+[Resultado Etapa 1](#Etapa1_1)
 
 [**Voltar ao Sumário**](#sumário)
 
-<a id="Exercício_exp_2"></a>
+<a id="Etapa2"></a>
 
-### Exercício Exportação 2
+## Etapa 2
 
-Exportar o resultado da query que obtém as 5 editoras com maior quantidade de livros na biblioteca para um arquivo CSV. Utilizar o caractere | (pipe) como separador. Lembre-se que o conteúdo do seu arquivo deverá respeitar a sequência de colunas e seus respectivos nomes de cabeçalho que listamos abaixo: CodEditora, NomeEditora, QuantidadeLivros. Observação: O arquivo exportado, conforme as especificações acima, deve ser disponibilizado no GitHub.
+Apresente a média de receita de bilheteria bruta dos principais filmes, considerando todos os atores. Estamos falando aqui da média da coluna **Gross**.
 
-[Solução SQL Exercício Exportação 2](Exercicios/SPRINT_02_E03_02.sql)
+[Etapa 2](Exercicios/ETL/etapa-2.txt)
 
-[Solução CSV Exercício Exportação 2](Exercicios/SPRINT_02_E03_02.csv)
+[Resultado Etapa 2](#Etapa2_1)
 
-[Resultado Exercício Exportação 2](#Exercício_exp_2_1)
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Etapa3"></a>
+
+## Etapa 3
+
+Apresente o ator/atriz com a maior média de receita de bilheteria bruta por filme de conjunto de dados. Considere a coluna **Average per Movie** para fins de cálculo.
+
+[Etapa 3](Exercicios/ETL/etapa-3.txt)
+
+[Resultado Etapa 3](#Etapa3_1)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Etapa4"></a>
+
+## Etapa 4
+
+A coluna **#1 Movie** contém o filme de aior bilheteria em que o ator atuou. Realize a contagem de aparições deste filmes no dataset, listando-os ordenados pela quantidade de vezes em que estão presentes. Considere a ordem decrescente e, em segundo nível, o nome do filme.
+
+Ao escrever no arquivo, considere o padrão de saída **(sequência) - O filme (nome filme) aparece (quantidade) vez(es) no dataset**, adicionando um resultado a cada linha.
+
+[Etapa 4](Exercicios/ETL/etapa-4.txt)
+
+[Resultado Etapa 4](#Etapa4_1)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Etapa5"></a>
+
+## Etapa 5
+
+Apresente a lista dos atores ordenada pela receita bruta de bilheteria de seus filmes (coluna **Total Gross**), em ordem decrescente.
+
+Ao escrever no arquivo, considere o padrão de saída **(nome do ator) - (receita total bruta)**, adicionando um resultado a cada linha.
+
+[Etapa 5](Exercicios/ETL/etapa-5.txt)
+
+[Resultado Etapa 5](#Etapa5_1)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -919,24 +1002,61 @@ Exportar o resultado da query que obtém as 5 editoras com maior quantidade de l
 
 [**Voltar ao Sumário**](#sumário)
 
+<a id="Exercício_ETL_1"></a>
 
-<a id="Exercício_exp_1_1"></a>
+### Exercício ETL
 
-### Exercício Exportação 1
+<a id="Etapa1_1"></a>
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E02_02.png>)
+## Etapa 1
 
-[**Voltar ao Exercício Exportação 1**](#Exercício_exp_1)
+![Resultado](<Evidencias/Exercicios/ETL_ETAPA_1.png>)
+
+[**Voltar a Etapa 1**](#Etapa1)
 
 [**Voltar ao Sumário**](#sumário)
 
-<a id="Exercício_exp_2_1"></a>
+<a id="Etapa2_1"></a>
 
-### Exercício Exportação 2
+### Etapa 2
 
-![Resultado](<Evidencias/Exercicios/SPRINT_02_E03_02.png>)
+![Resultado](<Evidencias/Exercicios/ETL_ETAPA_2.png>)
 
-[**Voltar ao Exercício Exportação 2**](#Exercício_exp_2)
+[**Voltar a Etapa 2**](#Etapa2)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Etapa3_1"></a>
+
+### Etapa 3
+
+![Resultado](<Evidencias/Exercicios/ETL_ETAPA_3.png>)
+
+[**Voltar a Etapa 3**](#Etapa3)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Etapa4_1"></a>
+
+### Etapa 4
+
+![Resultado](<Evidencias/Exercicios/ETL_ETAPA_4_1.png>)
+
+![Resultado](<Evidencias/Exercicios/ETL_ETAPA_4_2.png>)
+
+[**Voltar a Etapa 4**](#Etapa4)
+
+[**Voltar ao Sumário**](#sumário)
+
+<a id="Etapa5_1"></a>
+
+### Etapa 5
+
+![Resultado](<Evidencias/Exercicios/ETL_ETAPA_5_1.png>)
+
+![Resultado](<Evidencias/Exercicios/ETL_ETAPA_5_2.png>)
+
+[**Voltar a Etapa 5**](#Etapa5)
 
 [**Voltar ao Sumário**](#sumário)
 

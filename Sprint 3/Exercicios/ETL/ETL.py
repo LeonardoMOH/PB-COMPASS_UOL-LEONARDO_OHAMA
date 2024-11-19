@@ -3,6 +3,8 @@ with open('Sprint 3/Exercicios/ETL/actors.csv', 'r') as arquivo:
 
 # novo_csv = [separar_linhas.strip().split('\n') for separar_linhas in primeira_leitura]
 
+# novo_csv = [separar_linhas.strip().split(',') for separar_linhas in primeira_leitura]
+
 lista = []
 for linha in primeira_leitura:
     linha = linha.strip()
@@ -22,8 +24,6 @@ for linha in primeira_leitura:
         lista.append(termo)
     else:
         lista.append(linha.split(','))
-
-# novo_csv = [separar_linhas.strip().split(',') for separar_linhas in primeira_leitura]
 
 # Etapa 1.1 = Maior número de filmes
 
