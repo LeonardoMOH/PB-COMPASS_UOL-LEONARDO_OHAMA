@@ -1,0 +1,2 @@
+Etapa 1.2 = Média de receita dos filmes:
+A média de receita bruta é: 420.28 milhões de dólares
