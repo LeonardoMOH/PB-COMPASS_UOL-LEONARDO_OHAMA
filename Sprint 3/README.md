@@ -80,15 +80,13 @@
 
 # Resumo
 
-📊‍ **Python:** No curso de SQL, eu aprendi vários comandos para manipulação de tabelas, como SELECT, JOIN, UNION etc. E os operadores AND, OR, BETWEEN etc. No final do curso foi proposto exercícios para praticar o primeiro foi dos exercícios 01 ao 07 com o estudo de caso da biblioteca, os exercícios do 08 ao 16 foi o estudo de caso da loja e o exercício II que consistia em exportar os dados da tabela em formato csv com diferente separadores.
+📊‍ **Python:** No curso de Python consegui aprender desde a manipulação de variáveis, If, for, até a orientação objetos, list comprehesion. Os exercícios variavam em manipulação de variáveis e lista, abrir arquivos e também criação de classes. 
 
-🎯 **Desafio** O desafio consiste em normalizar os dados da tabela tb_locacao, que contém todos os dados das tabelas IDs do arquivo concessionaria com o Modelo Relacional e depois montar com base nesse modelo normalizado o Modelo Dimensional.
+🎯 **Desafio** O desafio consiste em tratar os dados e extrair dados de um dataset da Google Play Store que contém dados estatísticos de aplicativos dessa loja e com isso também gerar gráficos para uma melhor análise de negócio.
 
 [**Voltar ao Sumário**](#sumário)
 
 # Exercícios 🥋
-
-## Caso de Estudo: Biblioteca 📖
 
 <a id="Exercício01"></a>
 
@@ -222,8 +220,6 @@ Faça um programa que gere uma nova lista contendo apenas números ímpares.
 [Resultado Exercício 07](#Exercício07_1)
 
 [**Voltar ao Sumário**](#sumário)
-
-## Caso de Estudo: Loja
 
 <a id="Exercício08"></a>
 
