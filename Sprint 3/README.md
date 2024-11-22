@@ -80,9 +80,9 @@
 
 # Resumo
 
-📊‍ **Python:** No curso de Python consegui aprender desde a manipulação de variáveis, If, for, até a orientação objetos, list comprehesion. Os exercícios variavam em manipulação de variáveis e lista, abrir arquivos e também criação de classes. 
+📊‍ **Python:** No curso de Python consegui aprender desde a manipulação de variáveis, if, for, até a orientação objetos, list comprehesion. Os exercícios variavam em manipulação de variáveis e lista, abrir arquivos e também criação de classes. 
 
-🎯 **Desafio** O desafio consiste em tratar os dados e extrair dados de um dataset da Google Play Store que contém dados estatísticos de aplicativos dessa loja e com isso também gerar gráficos para uma melhor análise de negócio.
+🎯 **Desafio** O desafio consiste em tratar os dados e extrair-los de um dataset da Google Play Store que contém dados de aplicativos dessa loja e com isso também gerar gráficos para uma melhor análise de negócio.
 
 [**Voltar ao Sumário**](#sumário)
 
