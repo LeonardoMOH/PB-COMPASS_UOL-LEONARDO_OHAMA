@@ -60,7 +60,7 @@
 
 1. [README Principal](../../README.md)
 
-2. [README Sprint 2](../README.md)
+2. [README Sprint 3](../README.md)
 
 <a id="Etapas"></a>
 
