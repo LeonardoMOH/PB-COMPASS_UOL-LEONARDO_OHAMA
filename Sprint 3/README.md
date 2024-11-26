@@ -1,6 +1,6 @@
 # Sumário
 
-### Sprint 2:
+### Sprint 3:
 
 1. [Resumo](#resumo)
 
