@@ -1,5 +1,7 @@
 lista = [8000,7998,7996,7994,7994]
 
+lista.extend(range(-2000,7990))
+
 pares = list(map(lambda x: x if x % 2 == 0 else None, lista))
 
 pares_filter = list(filter(None, pares))
