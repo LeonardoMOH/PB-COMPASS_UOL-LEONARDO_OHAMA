@@ -1,7 +1,7 @@
 FROM python:3
 
-# WORKDIR /script_python_etapa03
+WORKDIR /app
 
-# EXPOSE 5000
-
-# CMD ['python', './script_python_etapa03']
+COPY script_python_etapa03 /app/
+  
+CMD ["python", "script_python_etapa03"]
