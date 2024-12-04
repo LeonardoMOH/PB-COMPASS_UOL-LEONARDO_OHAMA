@@ -1,8 +1,11 @@
-lista = [8000,7998,7996,7994,7994]
+with open('Sprint 4/Exercicios/number.txt', 'r') as arquivo:
+    primeira_leitura = arquivo.read().splitlines()
 
-lista.extend(range(-2000,7990))
+arquivo = [separar_linhas.strip() for separar_linhas in primeira_leitura]
 
-pares = list(map(lambda x: x if x % 2 == 0 else None, lista))
+arquivo = list(map(int, arquivo))
+
+pares = list(map(lambda x: x if x % 2 == 0 else None, arquivo))
 
 pares_filter = list(filter(None, pares))
 

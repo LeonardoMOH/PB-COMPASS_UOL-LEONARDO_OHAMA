@@ -1,4 +1,4 @@
-with open('estudantes.csv', 'r') as arquivo:
+with open('Sprint 4/Exercicios/estudantes.csv', 'r') as arquivo:
     primeira_leitura = arquivo.readlines()
 
 arquivo = [separar_linhas.strip().split(',') for separar_linhas in primeira_leitura]

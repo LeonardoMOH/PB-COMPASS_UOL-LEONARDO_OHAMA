@@ -1,17 +1,14 @@
 import hashlib
 
-# while True:
-#     nome = input('Digite uma string: ')
-#     if nome.isalpha():
-#         break
-#     else:
-#         print('Digite uma string!')
+# Loop para o input que transforma a string do input em um hashcode do algoritmo SHA-1
 
 while True:
     nome = input('Digite uma string: ')
 
     nome_hash = hashlib.sha1((nome.encode('utf-8'))).hexdigest()
     print(f'O hashcode SHA-1 da string é: {nome_hash}')
+
+    # Loop para continuar o programa ou terminar o programa
 
     while True:
 
