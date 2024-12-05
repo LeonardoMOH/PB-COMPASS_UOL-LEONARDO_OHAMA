@@ -16,8 +16,6 @@
 
     III.  [Etapa 3 - Dockerfile e script Python que gera um hashcode com algoritmo SHA-1 por meio de input](#Etapa3)
 
-    IV.   [Observações](#Observacoes)
-
 2. [Anexos](#anexos)
 
     I.    [Anexo 1 - Versão VSCode](#Anexo1)
@@ -50,6 +48,10 @@ Explicação do desenvolvimento de containers com o Docker em programas Python e
 
     ![Evidência](../Evidencias/Desafio/ETAPA1_-_DOCKERFILE_ETAPA01.png)
 
+    Para a criação da imagem, primeiro é colocado no diretório certo que nesse caso é a ETAPA_01 depois é feito o comando no terminal WSL que é o "docker build -t carguru ." após criado a imagem criamos um container com o "docker run carguru" que irá imprimir exatamente o resultado do arquivo carguru.py que é uma escolha aleatória de uma lista de carros, que foi o "Você deve dirigir um Hyundai HB20".
+
+    ![Evidência](../Evidencias/Desafio/ETAPA1_-_EXECUCAO_DOCKERFILE_ETAPA01.png)
+
 [**Voltar ao Sumário**](#sumário)
 
 <a id="Etapa2"></a>
@@ -74,15 +76,9 @@ Explicação do desenvolvimento de containers com o Docker em programas Python e
 
     ![Evidência](../Evidencias/Desafio/ETAPA3_-_DOCKERFILE_ETAPA03.png)
 
-[**Voltar ao Sumário**](#sumário)
+    Agora no terminal, é utilizado novamente o comando "docker build -t mascarar-dados ." que cria a imagem com o nome mascarar-dados e em seguida é criado e executado o novo container a partir da imagem que foi acabada de ser criada, a flag "-it" é usada, pois existe input no programa, fazendo assim o programa ser interativo e ter a necessidade de utilizar ela, caso não seja utilizado essa flag ocorre um erro. Os resultados são: input = teste, hash = 2e6f9b0d5885b6010f9167787445617f553a735f; input = string, hash = ecb252044b5ea0f679ee78ec1a12904739e2904d.
 
-<a id="Observacoes"></a>
-
-9. ... [Observações](#Observacoes)
-
-    I. No gráfico de top 5 instalações da [etapa 4](#Etapa4), talvez o ideal seria mudar alguns critérios ou pegar os números reais de instalação, porque as barras do gráfico ficaram homegêneas e também há outros dados que têm o mesmo valor ficando só uma amostra dos valores. 
-
-    II.No gráfico que agrupa os aplicativos por categoria da [etapa 5](#Etapa5) talvez seria ideal agrupar os grupos menores para que tivesse uma melhor visualização do gráfico pizza, ou também mudar os critérios.
+    ![Evidência](../Evidencias/Desafio/ETAPA3_-_EXECUCAO_SCRIPT_HASH_ETAPA03.png)
 
 [**Voltar ao Sumário**](#sumário)
 

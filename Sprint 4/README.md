@@ -397,8 +397,12 @@ O objetivo da função pares_ate é retornar um generator para os valores pares 
 
 # Certificados
 
-[AWS Partner Cloud Economics (Portuguese)](<Certificados/AWS Partner Cloud Economics (Portuguese).pdf>)
+[AWS Partner Credenciamento (Tecnico) (Portugues) AWS Partner Accreditation (Tecnical) (Portugues)](<Certificados/AWS Partner Credenciamento (Tecnico) (Portugues) AWS Partner Accreditation (Tecnical) (Portugues).pdf>)
 
-![AWS Partner Cloud Economics (Portuguese)](<Certificados/AWS Partner Cloud Economics (Portuguese).png>)
+![AWS Partner Credenciamento (Tecnico) (Portugues) AWS Partner Accreditation (Tecnical) (Portugues)](<Certificados/AWS Partner Credenciamento (Tecnico) (Portugues) AWS Partner Accreditation (Tecnical) (Portugues).png>)
+
+[Fundamentos Tecnicos Da AWS (Portugues) AWS Tecnical Essentials (Portuguese)](<Certificados/Fundamentos Tecnicos Da AWS (Portugues) AWS Tecnical Essentials (Portuguese).pdf>)
+
+![Fundamentos Tecnicos Da AWS (Portugues) AWS Tecnical Essentials (Portuguese)](<Certificados/Fundamentos Tecnicos Da AWS (Portugues) AWS Tecnical Essentials (Portuguese).png>)
 
 [**Voltar ao Sumário**](#sumário)
