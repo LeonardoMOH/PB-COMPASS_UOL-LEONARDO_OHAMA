@@ -4,9 +4,11 @@
 
 1. [Dockerfile Etapa 01](ETAPA_01/Dockerfile)
 
-2. [Dockerfile Etapa 03](ETAPA_03/Dockerfile)
+2. [Script carguru.py](ETAPA_01/carguru.py)
 
-3. [Script Python Etapa 03](ETAPA_03/script_python_etapa03.py)
+3. [Dockerfile Etapa 03](ETAPA_03/Dockerfile)
+
+4. [Script Python Etapa 03](ETAPA_03/script_python_etapa03.py)
 
 1. [Etapas](#etapas)
 
