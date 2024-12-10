@@ -1,0 +1,21 @@
+Etapa 01
+
+docker build -t carguru .
+docker run carguru
+
+Etapa 02
+
+docker ps -a
+docker start carguru
+docker logs carguru
+
+docker ps
+docker ps -a
+docker start 65b6
+docker exec -it 65b6 python /app/script_python_etapa03.py
+
+Etapa 03
+
+docker build -t mascarar-dados .
+docker images
+docker run -it 7607
