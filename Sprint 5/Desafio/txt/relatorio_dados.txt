@@ -1,0 +1,15 @@
+Relatório do arquivo APOSENTADOS_112024.csv feito no dia 20-12-2024
+
+Foram filtrados os orgãos INSS ou MS e as aposentadorias acima de 7000.0 reais
+
+O número de linhas do arquivo original é 688 e o número de colunas é 18
+O número de linhas do arquivo tratado e filtrado é 48 e o número de colunas é 18
+O máximo valor de aposentadoria é: 30209.93 reais
+O mínimo valor de aposentadoria é: 7185.94 reais
+A média do valor de aposentadoria é: 11901.20 reais
+
+A soma das aposentadorias é:
+   Tipo aposentadoria  Valor aposentadoria
+0        COMPULSORIA              8108.91
+1       INCAPACIDADE             15203.73
+2         VOLUNTARIA            547944.77
