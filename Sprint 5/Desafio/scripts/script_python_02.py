@@ -4,6 +4,8 @@ import csv
 
 from datetime import date
 
+import os
+
 # Essas linhas tentei utilizar, porem ocorreu erro no "encoding"
 
 # arquivo = "APOSENTADOS_112024.csv"
@@ -14,14 +16,20 @@ from datetime import date
 
 # import chardet
 
-# with open('Sprint 5/Desafio/csv/APOSENTADOS_112024.csv', "rb") as file:
+# with open('Sprint 5/Desafio/APOSENTADOS_112024.csv', "rb") as file:
 #     result = chardet.detect(file.read(1000))
 #     print(result)
+
+# Criacao de pastas
+
+os.makedirs('Sprint 5/Desafio/Video/txt', exist_ok = True)
+os.makedirs('Sprint 5/Desafio/Video/csv', exist_ok = True)
+os.makedirs('Sprint 5/Desafio/Video/scripts', exist_ok = True)
 
 # Abertura do arquivo CSV
 
 with open(
-    'Sprint 5/Desafio/csv/APOSENTADOS_112024.csv', 
+    'Sprint 5/Desafio/APOSENTADOS_112024.csv', 
     "r", 
     encoding="ISO-8859-1"
 ) as arquivo:

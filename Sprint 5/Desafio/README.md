@@ -4,7 +4,7 @@
 
 ## Arquivos
 
-1. [CSV Original](csv/APOSENTADOS_112024.csv)
+1. [CSV Original](APOSENTADOS_112024.csv)
 
 2. [CSV apenas Tratado](csv/APOSENTADOS_112024_NOVO.csv)
 
@@ -144,7 +144,7 @@ Explicação do desenvolvimento de programas em Python, o primeiro script tem qu
 
     Depois disso, foi retirado todos espaços em branco nas extremidades das linhas com o auxílio da função lambda e o strip() para as linhas que precisam ser feitas esse tratamento, agora para a coluna que estava em sua maior parte em "branco", que é da coluna "Portaria aposentadoria" foi colocado nesses valores em "branco" o valor "Desconhecido". Na linha de comando seguinte é tratado os valores referente a coluna "Valor aposentadoria" que primeiro tinha ponto para indicar valores a cada 1000 e os centavos que estavam representados pela vírgula e para isso foram feitas a utilização de tranformação para string (.str) e o replace para retirar esses valores de . e de vírgula, sendo o último para a substituição com o ponto e no final transformando os valores da coluna em float. E finalizando a etapa de tratamento é feito a mudança nas datas que estavam em um formato não adequado e para isso, primeiro é verificado se as datas estão no formato DDMMAAAA ou se estão no formato incorreto que seria o DMMAAAA, como os valores que representam esse formato incorreto é devido os programas ignorarem o zero a esquerda por entenderem que é um número inteiro, assim foi utilizado a função lambda para verificar cada linha das colunas: "Dt ocorrencia inatividade" e "Dt ingresso servico publico" e nas linhas de comando seguintes é transformado os valores da coluna em datetime e com o formato DD-MM-AAAA.
 
-    ![Evidência](../Evidencias/Desafio/ETAPA5_1_-_SCRIPT_TRATAMENTO.png)
+    ![Evidência](../Evidencias/Desafio/ETAPA5_2_-_SCRIPT_TRATAMENTO.png)
 
 [**Voltar ao Sumário**](#sumário)
 

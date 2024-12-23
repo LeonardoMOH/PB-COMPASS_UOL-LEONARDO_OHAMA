@@ -1,4 +1,4 @@
-Relatório do arquivo APOSENTADOS_112024.csv feito no dia 20-12-2024
+Relatório do arquivo APOSENTADOS_112024.csv feito no dia 23-12-2024
 
 Foram filtrados os orgãos INSS ou MS e as aposentadorias acima de 7000.0 reais
 
