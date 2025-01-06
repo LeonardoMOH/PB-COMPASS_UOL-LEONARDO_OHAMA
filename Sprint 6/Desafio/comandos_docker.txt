@@ -1,0 +1,7 @@
+cd "Sprint 6/Desafio"
+
+docker build -f "docker/Dockerfile" -t desafio-final-imagem .
+
+docker run -d --name desafio-final-conteiner `
+  -v "C:\Users\Installer\.aws:/root/.aws" `
+  -v datasets:/data desafio-final-imagem
