@@ -8,11 +8,11 @@
 
     I.    [Exercício Lab AWS S3](#Exercício01)
 
-    [index.html](Exercicios/index.html)
+    [index.html](../Sprint%205/Exercicios/index.html)
 
-    [error.html](Exercicios/error.html)
+    [error.html](../Sprint%205/Exercicios/error.html)
 
-    [nomes.csv](Exercicios/dados/nomes.csv)
+    [nomes.csv](../Sprint%205/Exercicios/dados/nomes.csv)
 
     II.   [Exercício Lab AWS Athena](#Exercício02)
 
@@ -70,7 +70,7 @@ Selecione a região onde você deseja criar o bucket. Escolha US East (N. Virgin
 
 Para aceitar as configurações padrão e criar o bucket, escolha Create (Criar).
 
-![Resultado](<Evidencias/Exercicios/SPRINT_05_01.png>)
+![Resultado](<../Sprint%205/Evidencias/Exercicios/SPRINT_05_01.png>)
 
 ### Etapa 2: Habilitar hospedagem de site estático
 
@@ -172,7 +172,7 @@ Para conceder acesso público de leitura ao site, copie a política de bucket a 
     ]
 }
 
-![Resultado](<Evidencias/Exercicios/SPRINT_05_02.png>)
+![Resultado](<../Sprint%205/Evidencias/Exercicios/SPRINT_05_02.png>)
 
 No JSON acima, substitua, na seção Resource, o valor de Bucket-Name para o nome do seu bucket.
 
@@ -275,7 +275,7 @@ Na parte inferior da página, em Static website hosting (Hospedagem estática de
 
 Agora você tem um site hospedado no Amazon S3. Esse site está disponível publicamente no endpoint de site do Amazon S3. Você pode também ter um domínio, como example.com, para exibir o conteúdo do site que criou. Neste caso, é preciso executar etapas adicionais.
 
-![Resultado](<Evidencias/Exercicios/SPRINT_05_03.png>)
+![Resultado](<../Sprint%205/Evidencias/Exercicios/SPRINT_05_03.png>)
 
 
 
