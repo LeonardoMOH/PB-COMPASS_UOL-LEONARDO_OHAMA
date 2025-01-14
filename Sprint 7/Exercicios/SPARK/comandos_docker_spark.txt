@@ -1,0 +1,24 @@
+docker pull jupyter/all-spark-notebook
+
+docker run -p 8888:8888 -v "$(pwd)/Sprint 7/README.md:/app/README.md" jupyter/all-spark-notebook
+
+docker ps -a
+
+docker exec -it <CONTAINERID> pyspark
+
+# Pyspark
+
+import re
+
+caminho = "/app/README.md"
+
+rdd = sc.textFile(caminho)
+
+palavras_rdd = rdd.flatMap(lambda linha: linha.split()) \
+                  .map(lambda palavra: re.sub(r'[^\w\s]', '', palavra.lower()))
+
+contagem_palavras = palavras_rdd.map(lambda palavra: (palavra, 1)) \
+                                .reduceByKey(lambda a, b: a + b)
+
+for palavra, contagem in contagem_palavras.collect():
+    print(f"{palavra}: {contagem}")
