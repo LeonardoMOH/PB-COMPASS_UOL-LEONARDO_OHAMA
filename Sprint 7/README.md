@@ -130,6 +130,8 @@ Enunciado no pdf.
 
 ![GLUE](<../Sprint 7/Evidencias/Exercicios/GLUE/SPRINT_07_19_GLUE.png>)
 
+![GLUE](<../Sprint 7/Evidencias/Exercicios/GLUE/SPRINT_07_20_GLUE.png>)
+
 [**Voltar ao Sumário**](#sumário)
 
 # Certificados
