@@ -2,7 +2,9 @@
 
 ### Desafio:
 
-1. [Dockerfile](docker/Dockerfile)
+1. [Dockerfile](layer_docker/Dockerfile)
+
+    [Layer Lambda](layer_docker/minha-camada-requests.zip)
 
 2. [Script Python](scripts/tmdb_request_api.py)
 
