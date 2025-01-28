@@ -19,3 +19,10 @@ dados = []
 
 for i in range(0, qtd_nomes_aleatorios):
     dados.append(random.choice(aux))
+
+diretorio = 'Sprint 8/Exercicios/SPARK_BATCH/txt/'
+arquivo = 'nomes_aleatorios'
+
+with open(f'{diretorio}{arquivo}.txt', 'w') as text_file:
+    for x in dados:
+        text_file.write(f'{x}\n')
