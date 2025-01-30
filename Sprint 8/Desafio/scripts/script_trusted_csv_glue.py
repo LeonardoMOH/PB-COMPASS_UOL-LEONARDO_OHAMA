@@ -31,36 +31,15 @@ df = dynamic_frame.toDF()
 
 df.show(5)
 
-# Mapeamento de tipos de colunas
+# Renomear coluna tituloPincipal
 
-type_column = {
-    "id": "string",
-    "tituloPincipal": "string",
-    "tituloOriginal": "string",
-    "anoLancamento": "int",
-    "tempoMinutos": "int",
-    "genero": "string",
-    "notaMedia": "float",
-    "numeroVotos": "int",
-    "generoArtista": "string",
-    "personagem": "string",
-    "nomeArtista": "string",
-    "anoNascimento": "int",
-    "anoFalecimento": "int",
-    "profissao": "string",
-    "titulosMaisConhecidos": "string"
-}
-
-# Converter as colunas
-
-for column, dtype in type_column.items():
-    df = df.withColumn(column, df[column].cast(dtype))
+df = df.withColumnRenamed("tituloPincipal", "tituloPrincipal")
 
 # Encontrar linhas com valores nulos em qualquer coluna
 
 nulls_colunm = df.filter(
     col("id").isNull()
-    | col("tituloPincipal").isNull()
+    | col("tituloPrincipal").isNull()
     | col("tituloOriginal").isNull()
     | col("anoLancamento").isNull()
     | col("tempoMinutos").isNull()
@@ -90,6 +69,31 @@ df = df.na.fill({"profissao": "Desconhecido"})
 # Removendo valores duplicados
 
 df = df.dropDuplicates()
+
+# Mapeamento de tipos de colunas
+
+type_column = {
+    "id": "string",
+    "tituloPrincipal": "string",
+    "tituloOriginal": "string",
+    "anoLancamento": "int",
+    "tempoMinutos": "int",
+    "genero": "string",
+    "notaMedia": "float",
+    "numeroVotos": "int",
+    "generoArtista": "string",
+    "personagem": "string",
+    "nomeArtista": "string",
+    "anoNascimento": "int",
+    "anoFalecimento": "int",
+    "profissao": "string",
+    "titulosMaisConhecidos": "string"
+}
+
+# Converter as colunas
+
+for column, dtype in type_column.items():
+    df = df.withColumn(column, df[column].cast(dtype))
 
 # Filtrar as colunas que contem apenas os generos misterio e terror
 

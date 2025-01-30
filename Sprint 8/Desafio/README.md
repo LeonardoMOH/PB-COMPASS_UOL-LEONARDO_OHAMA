@@ -222,6 +222,8 @@ Explicação do desenvolvimento da extração dos dados dos filmes pela API TMDB
 
     II. Para a utilização do Pyspark localmente foi instalado Java 11, o winutils - hadoop 3.0, pyspark 5.4.3 via pip install como mostrado no começo das etapas e para os exercícios foi utilizado o Google Colab principalmente.
 
+    III. A coluna do csv estava com a grafia errada "tituloPincipal", então foi renomeado para "tituloPrincipal".
+
 [**Voltar ao Sumário**](#sumário)
 
 ## Anexos

@@ -75,11 +75,15 @@ for colunm in df.columns:
 
 df = df.dropDuplicates()
 
+# Renomear coluna tituloPincipal
+
+df = df.withColumnRenamed("tituloPincipal", "tituloPrincipal")
+
 # Normalizar os tipos das colunas
 
 type_column = {
     "id": "string",
-    "tituloPincipal": "string",
+    "tituloPrincipal": "string",
     "tituloOriginal": "string",
     "anoLancamento": "int",
     "tempoMinutos": "int",
@@ -106,6 +110,8 @@ df = df.filter(
 # rows = df.count()
 
 # print(f"Número de linhas: {rows}")
+
+# Output do parquet
 
 path = 'Sprint 8/Desafio/parquet/LOCAL/movies_csv.parquet'
 
