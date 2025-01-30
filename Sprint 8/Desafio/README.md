@@ -10,7 +10,7 @@
 
 4. [Script Python Auxiliar Local JSON](scripts/script_trusted_json.py)
 
-5. [Arquivo Parquet do Glue (CSV)](parquet/GLUE/part-00000-b766f2e4-a53b-44c6-988f-f50e6ab2c364-c000.snappy.parquet)
+5. [Arquivo Parquet do Glue (CSV)](parquet/GLUE/part-00000-32f41a81-2c46-47c9-8a60-514577dccd56-c000.snappy.parquet)
 
 6. [Arquivo Parquet do Glue (JSON)](parquet/GLUE/part-00000-74d09563-078f-4d10-ac04-b4953011ffe5-c000.snappy.parquet)
 
