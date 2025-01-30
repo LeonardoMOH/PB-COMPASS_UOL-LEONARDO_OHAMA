@@ -5,7 +5,7 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
 
-from pyspark.sql.functions import col
+# from pyspark.sql.functions import col
 from datetime import date
 
 ## @params: [JOB_NAME, S3_INPUT_PATH, S3_TARGET_PATH]

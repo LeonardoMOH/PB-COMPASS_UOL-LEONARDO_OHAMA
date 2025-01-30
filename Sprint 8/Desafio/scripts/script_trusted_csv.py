@@ -46,13 +46,38 @@ for colunm in df.columns:
 
 df = df.na.fill({"profissao": "Desconhecido"})
 
+# Encontrar linhas com valores nulos em qualquer coluna novamente
+
+nulls_colunm = df.filter(
+    col("id").isNull() 
+    | col("tituloPincipal").isNull() 
+    | col("tituloOriginal").isNull()
+    | col("anoLancamento").isNull()
+    | col("tempoMinutos").isNull()
+    | col("genero").isNull()
+    | col("notaMedia").isNull()
+    | col("numeroVotos").isNull()
+    | col("generoArtista").isNull()
+    | col("personagem").isNull()
+    | col("nomeArtista").isNull()
+    | col("anoNascimento").isNull()
+    | col("anoFalecimento").isNull()
+    | col("profissao").isNull()
+    | col("titulosMaisConhecidos").isNull()
+)
+nulls_colunm.show()
+
+for colunm in df.columns:
+    null_count = df.filter(F.col(colunm).isNull()).count()
+    print(f"A coluna {colunm} tem {null_count} valores nulos.")
+
 # Removendo valores duplicados
 
 df = df.dropDuplicates()
 
 # Normalizar os tipos das colunas
 
-type_colunm = {
+type_column = {
     "id": "string",
     "tituloPincipal": "string",
     "tituloOriginal": "string",
@@ -69,6 +94,11 @@ type_colunm = {
     "profissao": "string",
     "titulosMaisConhecidos": "string"
 }
+
+# Converter as colunas
+
+for column, dtype in type_column.items():
+    df = df.withColumn(column, df[column].cast(dtype))
 
 df = df.filter(
     col("genero").contains("Horror") | col("genero").contains("Mystery"))

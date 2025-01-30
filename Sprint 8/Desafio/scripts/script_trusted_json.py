@@ -22,6 +22,7 @@ df = spark.read.option("multiline", "true").json(files_json)
 df.show(5)
 
 # Encontrar linhas com valores nulos em qualquer coluna
+
 nulls_colunm = df.filter(
     col("id").isNull() 
     | col("imdb_id").isNull() 
@@ -36,6 +37,12 @@ nulls_colunm = df.filter(
     | col("director").isNull()
 )
 nulls_colunm.show()
+
+# Retira do dataframe valores duplicadas
+
+df = df.dropDuplicates()
+
+# # Troca os valores nulos para Desconhecido
 
 # all_columns = df.columns
 

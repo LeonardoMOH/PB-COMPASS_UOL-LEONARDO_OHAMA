@@ -31,6 +31,31 @@ df = dynamic_frame.toDF()
 
 df.show(5)
 
+# Mapeamento de tipos de colunas
+
+type_column = {
+    "id": "string",
+    "tituloPincipal": "string",
+    "tituloOriginal": "string",
+    "anoLancamento": "int",
+    "tempoMinutos": "int",
+    "genero": "string",
+    "notaMedia": "float",
+    "numeroVotos": "int",
+    "generoArtista": "string",
+    "personagem": "string",
+    "nomeArtista": "string",
+    "anoNascimento": "int",
+    "anoFalecimento": "int",
+    "profissao": "string",
+    "titulosMaisConhecidos": "string"
+}
+
+# Converter as colunas
+
+for column, dtype in type_column.items():
+    df = df.withColumn(column, df[column].cast(dtype))
+
 # Encontrar linhas com valores nulos em qualquer coluna
 
 nulls_colunm = df.filter(
@@ -66,7 +91,7 @@ df = df.na.fill({"profissao": "Desconhecido"})
 
 df = df.dropDuplicates()
 
-# Normalizar os tipos das colunas
+# Filtrar as colunas que contem apenas os generos misterio e terror
 
 df = df.filter(
     col("genero").contains("Horror") | col("genero").contains("Mystery")
