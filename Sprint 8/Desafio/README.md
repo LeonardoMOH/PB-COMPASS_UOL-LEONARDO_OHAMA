@@ -224,7 +224,7 @@ Explicação do desenvolvimento da extração dos dados dos filmes pela API TMDB
 
     III. A coluna do csv estava com a grafia errada "tituloPincipal", então foi renomeado para "tituloPrincipal".
 
-    IV. Existe também valores como \\N em alguns valores, porém foi decidido manter por enquanto até se caso afete a análise será trocado posteriormente.
+    IV. Existe também valores como \\N e null em alguns valores, porém foi decidido manter por enquanto até se caso afete a análise será trocado posteriormente, possivelmente vai ser exclusivamente utilizados os dados da API do TMDB, principalmente porque vai ser feito uma análise de votos (votos no CSV estão desatualizados), budget e revenue.
 
 [**Voltar ao Sumário**](#sumário)
 

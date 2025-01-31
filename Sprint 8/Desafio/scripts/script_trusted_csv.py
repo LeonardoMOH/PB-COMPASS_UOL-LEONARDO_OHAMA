@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 from pyspark import SparkContext, SQLContext
-from pyspark.sql.functions import when, col
+from pyspark.sql.functions import col
 from pyspark.sql import functions as F
 
 spark = SparkSession \
