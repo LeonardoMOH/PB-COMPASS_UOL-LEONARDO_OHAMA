@@ -8,9 +8,9 @@
 
     I.    [Exercício Apache Spark I](#Exercício01)
 
-    I.    [Exercício Apache Spark II](#Exercício02)
+    II.    [Exercício Apache Spark II](#Exercício02)
 
-    II.   [Exercício TMDB](#Exercício03)
+    III.   [Exercício TMDB](#Exercício03)
 
 3. [Evidências](#evidências)
 

@@ -224,6 +224,8 @@ Explicação do desenvolvimento da extração dos dados dos filmes pela API TMDB
 
     III. A coluna do csv estava com a grafia errada "tituloPincipal", então foi renomeado para "tituloPrincipal".
 
+    IV. Existe também valores como \\N em alguns valores, porém foi decidido manter por enquanto até se caso afete a análise será trocado posteriormente.
+
 [**Voltar ao Sumário**](#sumário)
 
 ## Anexos
