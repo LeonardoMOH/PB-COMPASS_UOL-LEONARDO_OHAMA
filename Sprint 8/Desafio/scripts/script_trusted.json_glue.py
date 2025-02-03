@@ -6,7 +6,7 @@ from awsglue.context import GlueContext
 from awsglue.job import Job
 
 # from pyspark.sql.functions import col
-from datetime import date
+# from datetime import date
 
 ## @params: [JOB_NAME, S3_INPUT_PATH, S3_TARGET_PATH]
 args = getResolvedOptions(sys.argv, ['JOB_NAME', 'S3_INPUT_PATH', 'S3_TARGET_PATH'])
@@ -17,12 +17,11 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-# Data atual
+# Data
 
-current_date = date.today()
-year = current_date.year
-month = current_date.month
-day = current_date.day
+year = '2025'
+month = '01'
+day = '20'
 
 source_file = args['S3_INPUT_PATH']
 target_path = args['S3_TARGET_PATH']

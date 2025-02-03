@@ -210,7 +210,19 @@ Explicação do desenvolvimento da extração dos dados dos filmes pela API TMDB
 
     ![Evidência](../Evidencias/Desafio/ETAPA4_4_-_CRAWLER_CSV_TABELA.png)
 
+    ![Evidência](../Evidencias/Desafio/ETAPA4_4_-_CRAWLER_CSV_TABELA_2.png)
+
+    ![Evidência](../Evidencias/Desafio/ETAPA4_4_-_CRAWLER_CSV_TABELA_3.png)
+
+    ![Evidência](../Evidencias/Desafio/ETAPA4_4_-_CRAWLER_CSV_TABELA_4.png)
+
+    Para o arquivo parquet JSON:
+
     ![Evidência](../Evidencias/Desafio/ETAPA4_5_-_CRAWLER_JSON_TABELA.png)
+
+    ![Evidência](../Evidencias/Desafio/ETAPA4_5_-_CRAWLER_JSON_TABELA_2.png)
+
+    ![Evidência](../Evidencias/Desafio/ETAPA4_5_-_CRAWLER_JSON_TABELA_3.png)
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -225,6 +237,8 @@ Explicação do desenvolvimento da extração dos dados dos filmes pela API TMDB
     III. A coluna do csv estava com a grafia errada "tituloPincipal", então foi renomeado para "tituloPrincipal".
 
     IV. Existe também valores como \\N e null em alguns valores, porém foi decidido manter por enquanto até se caso afete a análise será trocado posteriormente, possivelmente vai ser exclusivamente utilizados os dados da API do TMDB, principalmente porque vai ser feito uma análise de votos (votos no CSV estão desatualizados), budget e revenue.
+
+    V. Será analisado apenas os filmes, sendo assim, foi feito o processamento dos dados apenas do arquivo movies.csv.
 
 [**Voltar ao Sumário**](#sumário)
 
