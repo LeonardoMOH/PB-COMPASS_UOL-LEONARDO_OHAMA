@@ -8,6 +8,8 @@
 
     I.    [Exercício Apache Spark I](#Exercício01)
 
+    [nomes_aleatorios.rar](<Exercicios/SPARK_BATCH/txt/nomes_aleatorios.rar>)
+
     II.    [Exercício Apache Spark II](#Exercício02)
 
     III.   [Exercício TMDB](#Exercício03)
