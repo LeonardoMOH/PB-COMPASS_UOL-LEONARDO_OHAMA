@@ -271,7 +271,7 @@ Explicação do desenvolvimento da ETL pelo Glue, na qual foi refinado os dados 
 
     ![Evidência](../Evidencias/Desafio/ETAPA5_2_-_SCRIPT_SQL_PARTE_TABELA.png)
 
-    E logo após isso é feito a verificação se os filmes que também serão analisados estão presentes nas tabelas.
+    E logo após isso é feito a verificação se os filmes que também serão analisados se estão presentes nas tabelas.
 
     ![Evidência](../Evidencias/Desafio/ETAPA5_3_-_SCRIPT_SQL_VERIFICACAO_FILMES.png)
 
