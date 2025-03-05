@@ -313,7 +313,9 @@ Explicação do desenvolvimento da etapa final do desafio que é a criação do 
 
     III. Como dito durante as etapas, o script foi primeiro "debuggado" localmente, depois testado e adaptado para o ambiente do Glue.
 
-    IV. Para a análise final vai ser utilizado apenas dados que respeitam os filtros que foram utilizados no endpoint discover que são: no mínimo 300 votos, com a votação média de 5, do gênero Terror e de idioma falado no filme inglês (Sprint 07).
+    IV. Para a análise final vai ser utilizado apenas dados que respeitam os filtros que foram utilizados no endpoint discover que são: no mínimo 300 votos, com a votação média de 5, do gênero Terror, de idioma falado no filme inglês (Sprint 07) e também foi utilizado filmes somente com a [década acima de 1960](#Anexo5).
+
+    V. Foi necessário manter a tabela bridge_genero para que não houvesse linhas duplicadas na tabela fato filme.
 
 [**Voltar ao Sumário**](#sumário)
 
@@ -358,3 +360,14 @@ Explicação do desenvolvimento da etapa final do desafio que é a criação do 
 [**Voltar para Etapas**](#Etapas)
 
 [**Voltar ao Sumário**](#sumário)
+
+<a id="Anexo5"></a>
+
+5. ... [Anexo 5 - Filtro utilizado em todos os gráficos](#Anexo5)
+
+    ![Evidência](../Evidencias/Desafio/ANEXO5_1_-_FILTRO_UTILIZADO_ACIMA_1960.png)
+
+[**Voltar para Etapas**](#Etapas)
+
+[**Voltar ao Sumário**](#sumário)
+
