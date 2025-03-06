@@ -20,6 +20,8 @@
 
 🎯 **Desafio** O desafio desta sprint é dividido em 5 partes e essas atualmente é a última parte que consiste em criar um dashboard com a análise dos dados extraídos e tratados das Sprints passadas via QuickSight da AWS.
 
+📊‍ **Área de Interesse** Devido uma maior aproximação a linguagem de programação Python e SQL a minha área de interesse é Engenharia de Dados.
+
 [**Voltar ao Sumário**](#sumário)
 
 # Exercícios
