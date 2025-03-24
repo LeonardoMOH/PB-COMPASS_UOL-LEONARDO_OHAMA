@@ -1,12 +1,5 @@
-# Bem-vindo ao meu GitHub! 👋
+# Bem-vindo ao meu Repositório! 👋
 
-<img src="assets/images/photo_2024-10-23_11-49-16.jpg" 
-     width="150" 
-     height=auto />
-
-<p style='text-align: justify;'>👋 Olá, sou Leonardo, residente na cidade de Osasco, atualmente estou fazendo Ciência de dados no 5º semestre na Univesp. Minha primeira experiência com programação foi com a linguagem COBOL em 2011 no Ensino Médio em que eu fiz curso para COBOL e CICS, após isso na minha primeira faculdade em Engenharia Mecânica tive a oportunidade de conhecer C++ e Python, agora na minha universidade atual(Univesp) consegui aprender ainda mais sobre Python, Java, SQL, HTML etc.</p>
-
-- 🎮 Hobbies: Gosto muito de jogos de PC e escutar músicas.
 - 🤝 [Linkedin](https://www.linkedin.com/in/leonardo-ohama-845a5b1a3)
 
 
