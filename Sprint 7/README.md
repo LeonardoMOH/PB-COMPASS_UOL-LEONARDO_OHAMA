@@ -26,7 +26,7 @@
 
 🎇 **Spark:** No curso de Spark conseguimos aprender a instalar e utilizar a ferramenta, comandos parecidos utilizados no SQL foram usados também para realizar as consultas de tabelas, criar schemas, tabelas, realizar JOINs, importar e exportar arquivos CSVs etc. 
 
-🎯 **Desafio** O desafio desta sprint é dividido em 5 partes, a primeira parte que é dessa sprint (Sprint 6). Essa primeira entrega consiste em fazer um script Python para executar dentro de um container do Docker para a ingestão de dados CSVs fornecidos (criar volume no Docker) e para isso é necessário utilizar a biblioteca boto3.
+🎯 **Desafio** O desafio desta sprint é dividido em 5 partes, sendo a segunda parte dessa sprint (Sprint 7). Essa segunda entrega consiste em fazer um script Python que utilize a API do TMDB, responsável por extrair informações de filmes, utilizando o AWS Lambda para a execução do script.
 
 [**Voltar ao Sumário**](#sumário)
 
